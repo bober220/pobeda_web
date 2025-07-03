@@ -1,0 +1,28 @@
+@use 'helpers' as *;
+
+:root{
+  --color-white: #FFFFFF;
+  --color-dark: #000000;
+  --color-not-active-button: #1D202F;
+  --color-background-main: #0D101C;
+  --color-background-header-footer: #101322;
+  --color-element: #151A32;
+  --color-linear-gradient-button: linear-gradient(to right, #6B1CDB, #962973);
+  --color-accent-text: linear-gradient(to right, #D9FF00, #FF0004);
+  --color-pink: #D611C5;
+  --color-orang: #FFAB58;
+  --color-purple: #8B39E9;
+  --color-blue: #8B39E9;
+
+  --font-family-info: 'Comforta', 'sant-serif';
+  --font-family-accant: 'AbhayaLibre', 'sant-serif';
+
+  --container-width: #{rem(1680)};
+  --container-padding-x: #{rem(16)};
+  transition-duration: 0.2s;
+
+  @include laptop{
+    --container-width: #{rem(1310)};
+  }
+}
+

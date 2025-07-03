@@ -1,0 +1,15 @@
+@use 'normalize';
+@use 'fonts';
+@use "varibals";
+@use "utils";
+@use "globals";
+
+body{
+  background-image: var(--color-linear-gradient-button);
+
+  p{
+    color: transparent;
+    background-clip: text;
+    background-image: var(--color-accent-text);
+  }
+}
