@@ -7,6 +7,7 @@
   --color-background-main: #0D101C;
   --color-background-header-footer: #101322;
   --color-element: #151A32;
+  --color-contact-button: #D4DF36;
   --color-linear-gradient-button: linear-gradient(to right, #6B1CDB, #962973);
   --color-accent-text: linear-gradient(to right, #D9FF00, #FF0004);
   --color-pink: #D611C5;
@@ -14,15 +15,20 @@
   --color-purple: #8B39E9;
   --color-blue: #8B39E9;
 
-  --font-family-info: 'Comforta', 'sant-serif';
-  --font-family-accant: 'AbhayaLibre', 'sant-serif';
+  --font-family-base: 'ABeeZee', 'sans-serif';
+  --font-family-info: 'Comfortaa', 'sans-serif';
+  --font-family-accant: 'AbhayaLibre', 'sans-serif';
 
   --container-width: #{rem(1680)};
-  --container-padding-x: #{rem(16)};
-  transition-duration: 0.2s;
+  --container-padding-x: #{rem(50)};
+  --transition-duration: 0.2s;
+
+  --border: #{rem(2)} solid var(--color-purple);
 
   @include laptop{
     --container-width: #{rem(1310)};
   }
+
+
 }
 

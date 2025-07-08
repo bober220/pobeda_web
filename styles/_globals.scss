@@ -1,16 +1,76 @@
 @use 'helpers' as *;
 @use "varibals" as *;
 
-body{
-  padding: 100px;
+body, html{
+  @include fluid-text(18, 8);
 
-  p{
-    @include fluid-text(48, 16);
+  font-family: var(--font-family-base);
+  color: var(--color-white);
+  background-color: var(--color-background-main);
 
-    width: rem(100);
+  }
 
-    @include mobile{
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+  color: var(--color-white);
+  font-weight: 400;
+}
 
+h1, .h1,
+h2, .h2{
+  font-family: var(--font-family-info);
+}
+
+h1, .h1{
+  @include fluid-text(64, 24)
+}
+
+h2, .h2{
+  @include fluid-text(48, 20)
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg *{
+  transition-duration: var(--transition-duration);
+}
+
+a{
+  color: inherit;
+
+  @include hover{
+    color: var(--color-purple);
+  }
+
+  &[class]{
+    text-decoration: none;
+  }
+}
+
+:focus-visible{
+  outline: rem(2) dashed var(--color-white);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a, button{
+  &[aria-label]{
+    position: relative;
+
+    &::before{
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
     }
   }
 }
+
