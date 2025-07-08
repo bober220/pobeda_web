@@ -4,12 +4,8 @@
 @use "utils";
 @use "globals";
 
-body{
-  background-image: var(--color-linear-gradient-button);
+@use 'blocks/logo';
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/header';
 
-  p{
-    color: transparent;
-    background-clip: text;
-    background-image: var(--color-accent-text);
-  }
-}

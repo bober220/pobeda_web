@@ -1,0 +1,23 @@
+{
+  "name": "pobeda_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bober220/pobeda_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bober220/pobeda_web/issues"
+  },
+  "homepage": "https://github.com/bober220/pobeda_web#readme",
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}
