@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .burger-button{
-  @include square(rem(34));
+  @include square(rem(50));
 
   display: inline-flex;
   flex-direction: column;

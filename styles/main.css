@@ -371,7 +371,7 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .logo {
-  max-width: clamp(7.375rem, 6.9318181818rem + 1.8181818182vw, 8.75rem);
+  max-width: clamp(9.875rem, 9.6332644628rem + 0.9917355372vw, 10.625rem);
 }
 
 .button {
@@ -410,8 +410,8 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .burger-button {
-  width: 2.125rem;
-  height: 2.125rem;
+  width: 3.125rem;
+  height: 3.125rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
