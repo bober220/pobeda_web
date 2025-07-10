@@ -8,17 +8,19 @@ html{
 }
 
 body{
-  &.is-lock{
-    overflow: hidden;
-  }
-
   @include fluid-text(18, 8);
 
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-white);
   background-color: var(--color-background-main);
 
-  }
+}
+
+main{
+  flex-grow: 1;
+}
 
 h1, .h1,
 h2, .h2,
@@ -41,6 +43,17 @@ h1, .h1{
 
 h2, .h2{
   @include fluid-text(48, 20)
+}
+
+h4, .h4{
+  @include fluid-text(24, 20);
+  font-family: var(--font-family-base);
+}
+
+h5, .h5{
+  @include fluid-text(18, 16);
+  font-family: var(--font-family-base);
+  opacity: 0.5;
 }
 
 a,

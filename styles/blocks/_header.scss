@@ -1,7 +1,21 @@
 @use '../helpers' as *;
 
 .header{
+  position: sticky;
+  z-index: 100;
+  top: 0;
   width: 100% ;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(100) rem(200);
+
+  @keyframes scrolling-header {
+    to{
+      box-shadow: 0 0 1rem var(--color-header-footer-shadow);
+    }
+  }
+
   &__body{
     padding-block: rem(14);
     background-color: var(--color-background-header-footer);
