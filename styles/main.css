@@ -371,7 +371,7 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .logo {
-  max-width: clamp(9.875rem, 9.6332644628rem + 0.9917355372vw, 10.625rem);
+  max-width: clamp(11.125rem, 11.2861570248rem + -0.6611570248vw, 10.625rem);
 }
 
 .button {
