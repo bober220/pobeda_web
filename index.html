@@ -12,7 +12,7 @@
     <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" data-js-header>
         <div class="header__body">
             <div class="header__body-inner container">
                 <a class="header__logo logo"
@@ -25,7 +25,7 @@
                         alt=""
                     />
                 </a>
-                <div class="header__overlay">
+                <div class="header__overlay" data-js-header-overlay>
                     <nav class="header__menu">
                         <ul class="header__menu-list">
                             <li class="header__menu-item ">
@@ -69,7 +69,8 @@
                 <button class="header__burger-button burger-button visible-mobile"
                         type="button"
                         aria-label="Open menu"
-                        title="Open menu">
+                        title="Open menu"
+                        data-js-header-button>
                             <span class="burger-button__line"></span>
                             <span class="burger-button__line"></span>
                             <span class="burger-button__line"></span>
@@ -77,5 +78,6 @@
             </div>
         </div>
     </header>
+
 </body>
 </html>

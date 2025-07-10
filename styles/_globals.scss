@@ -1,7 +1,13 @@
 @use 'helpers' as *;
 @use "varibals" as *;
 
-body, html{
+html{
+  &.is-lock{
+    overflow: hidden;
+  }
+}
+
+body{
   @include fluid-text(18, 8);
 
   font-family: var(--font-family-base);

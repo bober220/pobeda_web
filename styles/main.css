@@ -294,7 +294,11 @@ svg * {
   }
 }
 
-body, html {
+html.is-lock {
+  overflow: hidden;
+}
+
+body {
   font-size: clamp(0.5rem, 0.298553719rem + 0.826446281vw, 1.125rem);
   font-family: var(--font-family-base);
   color: var(--color-white);
@@ -394,14 +398,12 @@ a[aria-label]::before, button[aria-label]::before {
 @media (any-hover: hover) {
   .button:hover {
     color: var(--color-contact-button);
-    background-color: var(--color-dark);
     border-color: var(--color-contact-button);
   }
 }
 @media (any-hover: none) {
   .button:active {
     color: var(--color-contact-button);
-    background-color: var(--color-dark);
     border-color: var(--color-contact-button);
   }
 }
