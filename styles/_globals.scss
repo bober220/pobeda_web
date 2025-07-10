@@ -8,6 +8,10 @@ html{
 }
 
 body{
+  &.is-lock{
+    overflow: hidden;
+  }
+
   @include fluid-text(18, 8);
 
   font-family: var(--font-family-base);

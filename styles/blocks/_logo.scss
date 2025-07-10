@@ -2,7 +2,11 @@
 
 
 .logo {
-    max-width: fluid(170, 178);
+    max-width: fluid(120, 118);
+
+    @include mobile{
+        padding-right: rem(25);
+    }
     }
 
 

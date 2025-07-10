@@ -304,6 +304,9 @@ body {
   color: var(--color-white);
   background-color: var(--color-background-main);
 }
+body.is-lock {
+  overflow: hidden;
+}
 
 h1, .h1,
 h2, .h2,
@@ -375,7 +378,12 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .logo {
-  max-width: clamp(11.125rem, 11.2861570248rem + -0.6611570248vw, 10.625rem);
+  max-width: clamp(7.375rem, 7.3347107438rem + 0.1652892562vw, 7.5rem);
+}
+@media (width <= 47.99875rem) {
+  .logo {
+    padding-right: 1.5625rem;
+  }
 }
 
 .button {
@@ -412,8 +420,8 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .burger-button {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -462,6 +470,9 @@ a[aria-label]::before, button[aria-label]::before {
   .header__body {
     background-color: var(--color-background-main);
   }
+  .header__body .header__overlay.is-active {
+    background-color: var(--color-background-header-footer);
+  }
 }
 .header__body-inner {
   display: flex;
@@ -489,7 +500,7 @@ a[aria-label]::before, button[aria-label]::before {
   .header__overlay:not(.is-active) {
     opacity: 0;
     visibility: hidden;
-    translate: 100%;
+    display: none;
   }
 }
 @media (width <= 47.99875rem) {
