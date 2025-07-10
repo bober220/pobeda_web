@@ -19,8 +19,10 @@
   --font-family-info: 'Comfortaa', 'sans-serif';
   --font-family-accant: 'AbhayaLibre', 'sans-serif';
 
-  --container-width: #{rem(1680)};
-  --container-padding-x: #{rem(50)};
+  --container-width-main: #{rem(1680)};
+  --container-padding-x-main: #{rem(50)};
+  --container-width-mobile: #{rem(767.98)};
+  --container-padding-x-mobile: #{rem(16)};
   --transition-duration: 0.2s;
 
   --border: #{rem(2)} solid var(--color-purple);

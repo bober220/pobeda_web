@@ -252,8 +252,10 @@ svg * {
   --font-family-base: "ABeeZee", "sans-serif";
   --font-family-info: "Comfortaa", "sans-serif";
   --font-family-accant: "AbhayaLibre", "sans-serif";
-  --container-width: 105rem;
-  --container-padding-x: 3.125rem;
+  --container-width-main: 105rem;
+  --container-padding-x-main: 3.125rem;
+  --container-width-mobile: 47.99875rem;
+  --container-padding-x-mobile: 1rem;
   --transition-duration: 0.2s;
   --border: 0.125rem solid var(--color-purple);
 }
@@ -264,9 +266,16 @@ svg * {
 }
 
 .container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  max-width: calc(var(--container-width-main) + var(--container-padding-x-main) * 2);
   margin-inline: auto;
-  padding-inline: var(--container-padding-x);
+  padding-inline: var(--container-padding-x-main);
+}
+@media (width <= 47.99875rem) {
+  .container {
+    max-width: calc(var(--container-width-mobile) + var(--container-padding-x-mobile) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x-mobile);
+  }
 }
 
 .visually-hidden {
@@ -379,12 +388,6 @@ a[aria-label]::before, button[aria-label]::before {
 
 .logo {
   max-width: clamp(7.375rem, 7.3347107438rem + 0.1652892562vw, 7.5rem);
-}
-@media (width <= 47.99875rem) {
-  .logo {
-    margin-left: -1.25rem;
-    padding-right: 3.4375rem;
-  }
 }
 
 .button {

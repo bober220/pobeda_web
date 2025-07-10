@@ -4,11 +4,7 @@
 .logo {
     max-width: fluid(120, 118);
 
-    @include mobile{
-        margin-left: rem(-20);
-        padding-right: rem(55);
-    }
-    }
+}
 
 
 
