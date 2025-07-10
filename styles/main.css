@@ -382,7 +382,8 @@ a[aria-label]::before, button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .logo {
-    padding-right: 1.5625rem;
+    margin-left: -1.25rem;
+    padding-right: 3.4375rem;
   }
 }
 

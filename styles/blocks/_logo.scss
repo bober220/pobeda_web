@@ -5,7 +5,8 @@
     max-width: fluid(120, 118);
 
     @include mobile{
-        padding-right: rem(25);
+        margin-left: rem(-20);
+        padding-right: rem(55);
     }
     }
 
