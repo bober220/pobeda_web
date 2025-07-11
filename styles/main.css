@@ -653,7 +653,7 @@ a[aria-label]::before, button[aria-label]::before {
 }
 .slider__item img {
   width: 100%;
-  height: 18.75rem;
+  height: 31.25rem;
   object-fit: cover;
   display: block;
   margin: 0 auto;
