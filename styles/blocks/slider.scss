@@ -1,0 +1,95 @@
+@use '../helpers' as *;
+
+.wrapper {
+  max-width: rem(1300);
+  width: 100%;
+  margin: 0 auto;
+  padding: rem(50) rem(15);
+}
+
+.slider {
+  position: relative;
+
+  &__item {
+    width: 100%;
+    padding: 0;
+
+    img {
+      width: rem(1328);
+      height: rem(492);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: rem(10);
+      box-shadow: 0 rem(4) rem(15) rgba(0,0,0,0.2);
+
+      @include mobile{
+        width: rem(380);
+        height: rem(170);
+      }
+    }
+  }
+
+  /* Кнопки навигации */
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: rem(50);
+    height: rem(50);
+    background: white;
+    color: var(--color-purple);
+    border-radius: 50%;
+    border: none;
+    font-size: rem(20);
+    line-height: rem(50);
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 rem(2) rem(10) rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--color-background-main);
+      color: var(--color-contact-button);
+    }
+  }
+
+  .slick-prev {
+    left: rem(20);
+  }
+
+  .slick-next {
+    right: rem(20);
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: rem(20);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0 rem(5);
+
+      button {
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        border: none;
+        background: #ccc;
+        text-indent: -9999px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      &.slick-active button {
+        background: purple;
+      }
+    }
+  }
+}

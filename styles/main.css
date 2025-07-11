@@ -631,4 +631,89 @@ a[aria-label]::before, button[aria-label]::before {
   font-size: 1.5625rem;
 }
 
+.wrapper {
+  max-width: 81.25rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.125rem 0.9375rem;
+}
+
+.slider {
+  position: relative;
+  /* Кнопки навигации */
+}
+.slider__item {
+  width: 100%;
+  padding: 0;
+}
+.slider__item img {
+  width: 83rem;
+  height: 30.75rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+@media (width <= 47.99875rem) {
+  .slider__item img {
+    width: 23.75rem;
+    height: 10.625rem;
+  }
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: white;
+  color: var(--color-purple);
+  border-radius: 50%;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 3.125rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.slider .slick-arrow:hover {
+  background: var(--color-background-main);
+  color: var(--color-contact-button);
+}
+.slider .slick-prev {
+  left: 1.25rem;
+}
+.slider .slick-next {
+  right: 1.25rem;
+}
+.slider .slick-dots {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.slider .slick-dots li {
+  margin: 0 0.3125rem;
+}
+.slider .slick-dots li button {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.slider .slick-dots li.slick-active button {
+  background: purple;
+}
+
 /*# sourceMappingURL=main.css.map */
