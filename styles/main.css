@@ -662,7 +662,7 @@ a[aria-label]::before, button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .slider__item img {
-    width: 23.75rem;
+    width: 24.0625rem;
     height: 10.625rem;
   }
 }
