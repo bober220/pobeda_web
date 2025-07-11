@@ -5,7 +5,7 @@
 
   &__body{
     display: grid;
-    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-template-columns: 1fr 1fr 0.6fr;
     padding-block: fluid(60, 22);
     box-shadow: var(--color-header-footer-shadow);
     align-items: start;
@@ -13,6 +13,25 @@
 
     @include mobile{
       grid-template-columns: 1fr;
+    }
+
+    &-map{
+      width: 100%;
+      height: rem(250);
+      background-color: #333;
+      -moz-border-radius: 14px 14px 14px 14px; /* Firefox */
+      -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
+      -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
+      border-radius: 14px 14px 14px 14px; /* CSS3 */
+
+      overflow: hidden;
+
+      position: relative;
+      @include mobile{
+        display: none;
+      }
+
+
     }
 
     &-soc1als{
@@ -28,7 +47,7 @@
       }
       .soc1als_list {
         display: flex;
-        column-gap: rem(10);
+        column-gap: rem(14);
         margin-top: rem(27);
 
         .soc1als_item:not(:last-child) {
