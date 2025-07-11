@@ -5,7 +5,7 @@
 
   &__body{
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 0.7fr;
     padding-block: fluid(60, 22);
     box-shadow: var(--color-header-footer-shadow);
     align-items: start;
@@ -15,7 +15,41 @@
       grid-template-columns: 1fr;
     }
 
+    &-soc1als{
+      h4{
+        font-family: var(--font-family-base);
+        letter-spacing: rem(1);
+        font-size: rem(18);
+      }
+      @include mobile{
+        h4{
+          display: none;
+        }
+      }
+      .soc1als_list {
+        display: flex;
+        column-gap: rem(10);
+        margin-top: rem(27);
 
+        .soc1als_item:not(:last-child) {
+          margin-right: rem(3);
+        }
+        .soc1als_item:last-child{
+          margin-top: rem(2);
+        }
+
+      }
+      .contact{
+        h5{
+          margin-bottom: 0;
+        }
+        .number{
+          font-family: var(--font-family-base);
+          font-size: rem(25);
+        }
+      }
+
+    }
   }
 
 }
