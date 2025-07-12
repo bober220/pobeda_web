@@ -1,15 +1,21 @@
 @use '../helpers' as *;
 
 .wrapper {
-  max-width: rem(1300);
+  max-width: rem(1650);
   width: 100%;
   margin: 0 auto;
   padding: rem(50) rem(15);
 
-  @include mobile{
-    padding: rem(6) rem(0)
+  @include mobile {
+    padding: rem(6) rem(0);
   }
 
+  @include tablet {
+    max-width: rem(700);
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(50) rem(15);
+  }
 }
 
 .slider {
@@ -21,14 +27,14 @@
 
     img {
       width: 100%;
-      height: rem(500);
+      height: rem(600);
       object-fit: cover;
       display: block;
       margin: 0 auto;
       border-radius: rem(10);
       box-shadow: 0 rem(4) rem(15) rgba(0,0,0,0.2);
 
-      @include mobile{
+      @include mobile {
         width: rem(385);
         height: rem(170);
       }
@@ -77,23 +83,27 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    gap: rem(10);
 
     li {
-      margin: 0 rem(5);
-
+      margin: 0;
       button {
-        width: rem(10);
-        height: rem(10);
+        width: rem(12);
+        height: rem(12);
         border-radius: 50%;
         border: none;
         background: #ccc;
         text-indent: -9999px;
         cursor: pointer;
         transition: all 0.3s ease;
+        padding: 0;
+        opacity: 0.7;
       }
 
       &.slick-active button {
-        background: purple;
+        background: var(--color-purple);
+        opacity: 1;
+        transform: scale(1.2);
       }
     }
   }

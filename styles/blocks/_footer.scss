@@ -5,7 +5,7 @@
 
   &__body{
     display: grid;
-    grid-template-columns: 1fr 1fr 0.6fr;
+    grid-template-columns: 1fr 1fr;
     padding-block: fluid(60, 22);
     box-shadow: var(--color-header-footer-shadow);
     align-items: start;
@@ -23,10 +23,11 @@
       -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
       -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
       border-radius: 14px 14px 14px 14px; /* CSS3 */
-
       overflow: hidden;
-
       position: relative;
+
+
+
       @include mobile{
         display: none;
       }
@@ -35,6 +36,10 @@
     }
 
     &-soc1als{
+
+      @include mobile{
+        margin-left: 0;
+      }
       h4{
         font-family: var(--font-family-base);
         letter-spacing: rem(1);
@@ -51,9 +56,10 @@
         margin-top: rem(27);
 
         .soc1als_item:not(:last-child) {
-          margin-right: rem(3);
+          margin-right: rem(7);
         }
         .soc1als_item:last-child{
+          margin-left: rem(-10);
           margin-top: rem(2);
         }
 
