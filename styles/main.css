@@ -664,6 +664,9 @@ a[aria-label]::before, button[aria-label]::before {
   -webkit-user-drag: none;
   /* Кнопки навигации */
 }
+.slider .slick-track {
+  will-change: transform;
+}
 .slider.loading .slider__item:not(:first-child) {
   display: none;
 }
@@ -674,8 +677,13 @@ a[aria-label]::before, button[aria-label]::before {
   width: 100%;
   padding: 0;
   pointer-events: none;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000px;
 }
 .slider__item img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
   pointer-events: none;
   width: 100%;
   height: 37.5rem;

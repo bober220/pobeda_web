@@ -24,6 +24,11 @@
   user-select: none;
   -webkit-user-drag: none;
 
+  .slick-track {
+    will-change: transform; // Подсказка браузеру для оптимизации анимации
+  }
+
+
   &.loading {
     .slider__item:not(:first-child) {
       display: none;
@@ -40,8 +45,14 @@
     width: 100%;
     padding: 0;
     pointer-events: none;
+    backface-visibility: hidden; // Устраняет подергивания при анимации
+    transform: translateZ(0); // Аппаратное ускорение
+    perspective: 1000px; // Для лучшей производительности анимации
+
 
     img {
+      backface-visibility: hidden;
+      transform: translateZ(0);
       pointer-events: none;
       width: 100%;
       height: rem(600);
@@ -81,6 +92,8 @@
       background: var(--color-background-main);
       color: var(--color-contact-button);
     }
+
+
   }
 
   .slick-prev {
