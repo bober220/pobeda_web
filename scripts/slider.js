@@ -16,7 +16,7 @@ $(document).ready(function(){
 
         // Анимация
         fade: false,
-        speed: 500,
+        speed: 5000,
 
         // Адаптивные настройки
         responsive: [
