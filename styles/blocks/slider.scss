@@ -20,10 +20,21 @@
 
 .slider {
   position: relative;
-  // Добавляем эти стили для лучшего взаимодействия
-  touch-action: pan-y; // Разрешаем только вертикальные жесты (если нужно)
-  user-select: none; // Запрещаем выделение текста при свайпе
-  -webkit-user-drag: none; // Для Safari
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  &.loading {
+    .slider__item:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &.slick-initialized {
+    .slider__item {
+      display: block !important;
+    }
+  }
 
   &__item {
     width: 100%;

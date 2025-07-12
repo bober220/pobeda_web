@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.slider').slick({
+    $('.slider.loading').slick({
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev">❮</button>',
         nextArrow: '<button type="button" class="slick-next">❯</button>',
@@ -9,13 +9,13 @@ $(document).ready(function(){
         dotsClass: 'slick-dots',
 
         // Оптимизированные настройки для свайпа
-        touchThreshold: 15, // Увеличиваем порог срабатывания (было 5)
+        touchThreshold: 15,
         swipeToSlide: true,
         draggable: true,
-        edgeFriction: 0.05, // Уменьшаем "прилипание" (было 0.15)
+        edgeFriction: 0.05,
         waitForAnimate: false,
-        touchMove: true, // Включаем отслеживание движения касания
-        swipe: true, // Разрешаем свайп
+        touchMove: true,
+        swipe: true,
 
         // Автопрокрутка
         autoplay: true,
@@ -35,7 +35,7 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    touchThreshold: 10, // Увеличиваем для мобильных (было 3)
+                    touchThreshold: 10,
                     swipe: true,
                     centerMode: false,
                     variableWidth: false
@@ -45,9 +45,11 @@ $(document).ready(function(){
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    touchThreshold: 8 // Увеличиваем для маленьких экранов (было 2)
+                    touchThreshold: 8
                 }
             }
         ]
+    }).on('init', function(){
+        $(this).removeClass('loading');
     });
 });

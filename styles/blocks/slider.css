@@ -26,6 +26,12 @@
   -webkit-user-drag: none;
   /* Кнопки навигации */
 }
+.slider.loading .slider__item:not(:first-child) {
+  display: none;
+}
+.slider.slick-initialized .slider__item {
+  display: block !important;
+}
 .slider__item {
   width: 100%;
   padding: 0;
