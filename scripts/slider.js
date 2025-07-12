@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $('.slider').slick({
         arrows: true,
-        prevArrow: '<button type="button" class="slick-prev">←</button>',
-        nextArrow: '<button type="button" class="slick-next">→</button>',
+        prevArrow: '<button type="button" class="slick-prev">❮</button>',
+        nextArrow: '<button type="button" class="slick-next">❯</button>',
 
         // Настройки точек
         dots: true,
@@ -10,7 +10,7 @@ $(document).ready(function(){
 
         // Автопрокрутка
         autoplay: true,
-        autoplaySpeed: 5000, // 5 секунд
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         pauseOnFocus: false,
 
