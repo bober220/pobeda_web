@@ -21,11 +21,13 @@
 
 .slider {
   position: relative;
-  /* Кнопки навигации */
 }
 .slider__item {
   width: 100%;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: pan-y;
 }
 .slider__item img {
   width: 100%;
@@ -42,7 +44,22 @@
     height: 10.625rem;
   }
 }
-.slider .slick-arrow {
+.slider__item .slick-list {
+  overflow: hidden;
+  padding: 0 !important;
+}
+.slider__item .slick-track {
+  display: flex;
+  align-items: center;
+}
+.slider__item__item {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Кнопки навигации */
+.slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -60,17 +77,20 @@
   box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
-.slider .slick-arrow:hover {
+.slick-arrow:hover {
   background: var(--color-background-main);
   color: var(--color-contact-button);
 }
-.slider .slick-prev {
+
+.slick-prev {
   left: 1.25rem;
 }
-.slider .slick-next {
+
+.slick-next {
   right: 1.25rem;
 }
-.slider .slick-dots {
+
+.slick-dots {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -80,10 +100,10 @@
   margin: 0.625rem 0;
   gap: 0.625rem;
 }
-.slider .slick-dots li {
+.slick-dots li {
   margin: 0;
 }
-.slider .slick-dots li button {
+.slick-dots li button {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -95,7 +115,7 @@
   padding: 0;
   opacity: 0.7;
 }
-.slider .slick-dots li.slick-active button {
+.slick-dots li.slick-active button {
   background: var(--color-purple);
   opacity: 1;
   transform: scale(1.2);

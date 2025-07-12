@@ -39,6 +39,29 @@
         height: rem(170);
       }
     }
+    // Улучшение для touch-устройств
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: pan-y;
+
+    .slick-list {
+      // Улучшаем обработку касаний
+      overflow: hidden;
+      padding: 0 !important;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      // Важно для корректной работы свайпа
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
   }
 
   /* Кнопки навигации */
@@ -106,4 +129,3 @@
       }
     }
   }
-}
