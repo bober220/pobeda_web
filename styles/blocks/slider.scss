@@ -20,12 +20,18 @@
 
 .slider {
   position: relative;
+  // Добавляем эти стили для лучшего взаимодействия
+  touch-action: pan-y; // Разрешаем только вертикальные жесты (если нужно)
+  user-select: none; // Запрещаем выделение текста при свайпе
+  -webkit-user-drag: none; // Для Safari
 
   &__item {
     width: 100%;
     padding: 0;
+    pointer-events: none;
 
     img {
+      pointer-events: none;
       width: 100%;
       height: rem(600);
       object-fit: cover;
@@ -39,29 +45,6 @@
         height: rem(170);
       }
     }
-    // Улучшение для touch-устройств
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    touch-action: pan-y;
-
-    .slick-list {
-      // Улучшаем обработку касаний
-      overflow: hidden;
-      padding: 0 !important;
-    }
-
-    .slick-track {
-      display: flex;
-      align-items: center;
-    }
-
-    &__item {
-      // Важно для корректной работы свайпа
-      float: none;
-      display: inline-block;
-      vertical-align: top;
-    }
-  }
   }
 
   /* Кнопки навигации */
@@ -129,3 +112,4 @@
       }
     }
   }
+}

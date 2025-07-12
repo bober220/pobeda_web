@@ -8,24 +8,26 @@ $(document).ready(function(){
         dots: true,
         dotsClass: 'slick-dots',
 
-        // Настройки для тач-устройств
-        touchThreshold: 5, // Уменьшаем порог срабатывания свайпа
-        swipeToSlide: true, // Позволяет "дотягивать" слайд пальцем
-        draggable: true, // Включает перетаскивание
-        edgeFriction: 0.15, // Уменьшает "прилипание" при свайпе у краёв
-        waitForAnimate: false, // Позволяет быстро свайпать без ожидания анимации
+        // Оптимизированные настройки для свайпа
+        touchThreshold: 15, // Увеличиваем порог срабатывания (было 5)
+        swipeToSlide: true,
+        draggable: true,
+        edgeFriction: 0.05, // Уменьшаем "прилипание" (было 0.15)
+        waitForAnimate: false,
+        touchMove: true, // Включаем отслеживание движения касания
+        swipe: true, // Разрешаем свайп
 
         // Автопрокрутка
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
         pauseOnFocus: false,
-        pauseOnDotsHover: true, // Пауза при наведении на точки
+        pauseOnDotsHover: true,
 
         // Анимация
         fade: false,
         speed: 600,
-        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)', // Плавная анимация
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
 
         // Адаптивные настройки
         responsive: [
@@ -33,9 +35,9 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    touchThreshold: 3, // Ещё более чувствительный свайп на мобильных
+                    touchThreshold: 10, // Увеличиваем для мобильных (было 3)
                     swipe: true,
-                    centerMode: false, // Можно включить для эффекта "предпросмотра"
+                    centerMode: false,
                     variableWidth: false
                 }
             },
@@ -43,7 +45,7 @@ $(document).ready(function(){
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    touchThreshold: 2 // Максимальная чувствительность для маленьких экранов
+                    touchThreshold: 8 // Увеличиваем для маленьких экранов (было 2)
                 }
             }
         ]
