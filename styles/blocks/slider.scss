@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .wrapper {
-  max-width: rem(1650);
+  max-width: rem(1550);
   width: 100%;
   margin: 0 auto;
   padding: rem(50) rem(15);
@@ -23,11 +23,28 @@
   touch-action: pan-y;
   user-select: none;
   -webkit-user-drag: none;
+  overflow: hidden;
+  border-radius: rem(50);
+  margin: 0 auto;
 
-  .slick-track {
-    will-change: transform; // Подсказка браузеру для оптимизации анимации
+
+  @include laptop {
+    max-width: rem(1200); // Более узкий контейнер для laptop
   }
 
+  .slick-list {
+    border-radius: rem(50);
+    margin: 0;
+
+    @include laptop {
+      overflow: hidden; // Скрываем выходящие за границы элементы на laptop
+    }
+  }
+
+  .slick-track {
+    will-change: transform;
+    display: flex;
+  }
 
   &.loading {
     .slider__item:not(:first-child) {
@@ -42,13 +59,16 @@
   }
 
   &__item {
+    flex: 0 0 auto;
     width: 100%;
     padding: 0;
     pointer-events: none;
-    backface-visibility: hidden; // Устраняет подергивания при анимации
-    transform: translateZ(0); // Аппаратное ускорение
-    perspective: 1000px; // Для лучшей производительности анимации
-
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    perspective: 1000px;
+    border-radius: rem(50);
+    overflow: hidden;
+    transition: transform 0.5s ease; // Плавная анимация перехода
 
     img {
       backface-visibility: hidden;
@@ -60,11 +80,16 @@
       display: block;
       margin: 0 auto;
       border-radius: rem(10);
-      box-shadow: 0 rem(4) rem(15) rgba(0,0,0,0.2);
+      box-shadow: 0 rem(4) rem(15) rgba(0, 0, 0, 0.2);
+      transform-style: preserve-3d;
 
       @include mobile {
         width: rem(385);
         height: rem(170);
+      }
+
+      @include laptop {
+        height: rem(450);
       }
     }
   }
@@ -85,23 +110,29 @@
     line-height: rem(50);
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 rem(2) rem(10) rgba(0,0,0,0.3);
+    box-shadow: 0 rem(2) rem(10) rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 
     &:hover {
       background: var(--color-background-main);
       color: var(--color-contact-button);
     }
-
-
   }
 
   .slick-prev {
-    left: rem(20);
+    left: rem(10);
+
+    @include laptop {
+      left: rem(10);
+    }
   }
 
   .slick-next {
-    right: rem(20);
+    right: rem(10);
+
+    @include laptop {
+      right: rem(10);
+    }
   }
 
   .slick-dots {
@@ -110,28 +141,38 @@
     transform: translateX(-50%);
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: rem(10) 0;
+    padding: rem(10) rem(20);
+    margin: 0;
     gap: rem(10);
+    bottom: rem(20);
+    z-index: 15;
+    background: rgba(0, 0, 0, 0.6); // Более тёмный фон
+    border-radius: rem(30);
+    justify-content: center; // Центрируем точки по горизонтали
+    align-items: center; // Центрируем точки по вертикали
 
     li {
       margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(24); // Фиксированная ширина для li
+      height: rem(24); // Фиксированная высота для li
+
       button {
         width: rem(12);
         height: rem(12);
         border-radius: 50%;
         border: none;
-        background: #ccc;
+        background: rgba(255, 255, 255, 0.5);
         text-indent: -9999px;
         cursor: pointer;
         transition: all 0.3s ease;
         padding: 0;
-        opacity: 0.7;
       }
 
       &.slick-active button {
         background: var(--color-purple);
-        opacity: 1;
         transform: scale(1.2);
       }
     }

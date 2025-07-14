@@ -7,6 +7,7 @@ $(document).ready(function(){
         // Настройки точек
         dots: true,
         dotsClass: 'slick-dots',
+        adaptiveHeight: false,
 
         // Оптимизированные настройки для свайпа
         touchThreshold: 15,
