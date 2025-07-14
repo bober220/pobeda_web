@@ -7,7 +7,7 @@
   padding: rem(50) rem(15);
 
   @include mobile {
-    padding: rem(0) rem(0);
+    padding: rem(10) rem(15) !important;
   }
 
   @include tablet {
@@ -170,7 +170,7 @@
     gap: rem(6);
     bottom: rem(12);
     z-index: 15;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: rem(30);
     justify-content: center;
     align-items: center;
