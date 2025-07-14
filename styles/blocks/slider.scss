@@ -24,12 +24,49 @@
   user-select: none;
   -webkit-user-drag: none;
   overflow: hidden;
-  border-radius: rem(50);
+  border-radius: rem(10);
   margin: 0 auto;
+
+  @include mobile {
+    max-width: rem(361);
+    max-height: rem(167);
+    width: 100%;
+    height: 100%;
+    border-radius: rem(10); // Меньшее скругление для мобильных
+  }
+
+  .slick-list {
+    border-radius: rem(50); // Синхронизируем с основным контейнером
+
+    @include mobile {
+      border-radius: rem(20); // Такое же как у основного контейнера
+    }
+  }
+
+  &__item {
+    border-radius: rem(50); // Основное скругление
+
+    @include mobile {
+      border-radius: rem(20); // Меньшее скругление
+    }
+
+    img {
+      border-radius: rem(10); // Можно оставить небольшим или тоже адаптировать
+
+      @include mobile {
+        border-radius: rem(5); // Еще меньше для изображения
+      }
+    }
+  }
 
 
   @include laptop {
-    max-width: rem(1200); // Более узкий контейнер для laptop
+    max-width: rem(1200);
+  }
+
+  @include laptop-above {
+    max-width: rem(1328);
+    max-height: rem(492);
   }
 
   .slick-list {
@@ -37,7 +74,7 @@
     margin: 0;
 
     @include laptop {
-      overflow: hidden; // Скрываем выходящие за границы элементы на laptop
+      overflow: hidden;
     }
   }
 
@@ -66,17 +103,17 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     perspective: 1000px;
-    border-radius: rem(50);
+    border-radius: rem(20);
     overflow: hidden;
-    transition: transform 0.5s ease; // Плавная анимация перехода
+    transition: transform 0.5s ease;
 
     img {
       backface-visibility: hidden;
       transform: translateZ(0);
       pointer-events: none;
       width: 100%;
-      height: rem(600);
-      object-fit: cover;
+      height: auto; // Изменено с фиксированной высоты на auto
+      object-fit: contain; // Изменено с cover на contain
       display: block;
       margin: 0 auto;
       border-radius: rem(10);
@@ -84,17 +121,17 @@
       transform-style: preserve-3d;
 
       @include mobile {
-        width: rem(385);
-        height: rem(170);
+        width: 100%; // Убрал фиксированную ширину
+        height: auto; // Убрал фиксированную высоту
       }
 
       @include laptop {
-        height: rem(450);
+        height: auto; // Убрал фиксированную высоту
       }
     }
   }
 
-  /* Кнопки навигации */
+  /* Остальной код (кнопки навигации и точки) остается без изменений */
   .slick-arrow {
     position: absolute;
     top: 50%;
@@ -141,27 +178,38 @@
     transform: translateX(-50%);
     display: flex;
     list-style: none;
-    padding: rem(10) rem(20);
+    padding: rem(6) rem(12); // Уменьшены отступы внутри фона
     margin: 0;
-    gap: rem(10);
-    bottom: rem(20);
+    gap: rem(6); // Уменьшен промежуток между точками
+    bottom: rem(12); // Подняты немного выше
     z-index: 15;
-    background: rgba(0, 0, 0, 0.6); // Более тёмный фон
+    background: rgba(0, 0, 0, 0.6);
     border-radius: rem(30);
-    justify-content: center; // Центрируем точки по горизонтали
-    align-items: center; // Центрируем точки по вертикали
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      padding: rem(4) rem(8); // Еще меньше на мобильных
+      gap: rem(4); // Минимальный промежуток
+      bottom: rem(8); // Еще выше
+    }
 
     li {
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: rem(24); // Фиксированная ширина для li
-      height: rem(24); // Фиксированная высота для li
+      width: rem(20); // Немного уменьшил контейнер
+      height: rem(20);
+
+      @include mobile {
+        width: rem(14); // Компактнее на мобильных
+        height: rem(14);
+      }
 
       button {
-        width: rem(12);
-        height: rem(12);
+        width: rem(10);
+        height: rem(10);
         border-radius: 50%;
         border: none;
         background: rgba(255, 255, 255, 0.5);
@@ -169,11 +217,20 @@
         cursor: pointer;
         transition: all 0.3s ease;
         padding: 0;
+
+        @include mobile {
+          width: rem(7); // Точечки совсем маленькие
+          height: rem(7);
+        }
       }
 
       &.slick-active button {
         background: var(--color-purple);
         transform: scale(1.2);
+
+        @include mobile {
+          transform: scale(1.1);
+        }
       }
     }
   }
