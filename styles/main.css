@@ -645,7 +645,7 @@ a[aria-label]::before, button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .wrapper {
-    padding: 0.375rem 0rem;
+    padding: 0rem 0rem;
   }
 }
 @media (width <= 62.56125rem) {
@@ -663,9 +663,9 @@ a[aria-label]::before, button[aria-label]::before {
   user-select: none;
   -webkit-user-drag: none;
   overflow: hidden;
-  border-radius: 0.625rem;
+  border-radius: 3.125rem;
   margin: 0 auto;
-  /* Остальной код (кнопки навигации и точки) остается без изменений */
+  transition: border-radius 0.3s ease;
 }
 @media (width <= 47.99875rem) {
   .slider {
@@ -673,31 +673,7 @@ a[aria-label]::before, button[aria-label]::before {
     max-height: 10.4375rem;
     width: 100%;
     height: 100%;
-    border-radius: 0.625rem;
-  }
-}
-.slider .slick-list {
-  border-radius: 3.125rem;
-}
-@media (width <= 47.99875rem) {
-  .slider .slick-list {
     border-radius: 1.25rem;
-  }
-}
-.slider__item {
-  border-radius: 3.125rem;
-}
-@media (width <= 47.99875rem) {
-  .slider__item {
-    border-radius: 1.25rem;
-  }
-}
-.slider__item img {
-  border-radius: 0.625rem;
-}
-@media (width <= 47.99875rem) {
-  .slider__item img {
-    border-radius: 0.3125rem;
   }
 }
 @media (width <= 90.06125rem) {
@@ -714,6 +690,12 @@ a[aria-label]::before, button[aria-label]::before {
 .slider .slick-list {
   border-radius: 3.125rem;
   margin: 0;
+  transition: border-radius 0.3s ease;
+}
+@media (width <= 47.99875rem) {
+  .slider .slick-list {
+    border-radius: 1.25rem;
+  }
 }
 @media (width <= 90.06125rem) {
   .slider .slick-list {
@@ -738,9 +720,14 @@ a[aria-label]::before, button[aria-label]::before {
   backface-visibility: hidden;
   transform: translateZ(0);
   perspective: 1000px;
-  border-radius: 1.25rem;
+  border-radius: 3.125rem;
   overflow: hidden;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, border-radius 0.3s ease;
+}
+@media (width <= 47.99875rem) {
+  .slider__item {
+    border-radius: 1.25rem;
+  }
 }
 .slider__item img {
   backface-visibility: hidden;
@@ -754,16 +741,11 @@ a[aria-label]::before, button[aria-label]::before {
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
+  transition: border-radius 0.3s ease;
 }
 @media (width <= 47.99875rem) {
   .slider__item img {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (width <= 90.06125rem) {
-  .slider__item img {
-    height: auto;
+    border-radius: 0.3125rem;
   }
 }
 .slider .slick-arrow {
@@ -788,20 +770,28 @@ a[aria-label]::before, button[aria-label]::before {
   background: var(--color-background-main);
   color: var(--color-contact-button);
 }
+@media (width <= 47.99875rem) {
+  .slider .slick-arrow {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+  }
+}
 .slider .slick-prev {
   left: 0.625rem;
 }
-@media (width <= 90.06125rem) {
+@media (width <= 47.99875rem) {
   .slider .slick-prev {
-    left: 0.625rem;
+    left: 0.3125rem;
   }
 }
 .slider .slick-next {
   right: 0.625rem;
 }
-@media (width <= 90.06125rem) {
+@media (width <= 47.99875rem) {
   .slider .slick-next {
-    right: 0.625rem;
+    right: 0.3125rem;
   }
 }
 .slider .slick-dots {
@@ -819,6 +809,7 @@ a[aria-label]::before, button[aria-label]::before {
   border-radius: 1.875rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 @media (width <= 47.99875rem) {
   .slider .slick-dots {
