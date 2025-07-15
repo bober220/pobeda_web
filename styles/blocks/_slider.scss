@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   padding: rem(50) rem(15);
+  margin-bottom: rem(100);
 
   @include mobile {
     padding: rem(10) rem(15) !important;

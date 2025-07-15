@@ -642,6 +642,7 @@ a[aria-label]::before, button[aria-label]::before {
   width: 100%;
   margin: 0 auto;
   padding: 3.125rem 0.9375rem;
+  margin-bottom: 6.25rem;
 }
 @media (width <= 47.99875rem) {
   .wrapper {
