@@ -637,10 +637,36 @@ a[aria-label]::before, button[aria-label]::before {
   font-size: 1.5625rem;
 }
 
-.p24-w-schedule {
-  padding: 0 !important;
-  margin: 0 !important;
-  background: #1D202F;
+.platform-24 {
+  margin-top: 6.25rem;
+}
+.platform-24 .efec1 {
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  text-align: center; /* Дополнительно для текста */
+  width: 11.875rem;
+  margin: 0.9375rem 0.625rem; /* Внешние отступы: 15 сверху/снизу, 10 по бокам */
+  padding: 0.625rem 1.25rem;
+  background-color: var(--color-background-header-footer);
+  font-family: var(--font-family-info);
+  font-size: clamp(0.6875rem, 0.5061983471rem + 0.7438016529vw, 1.25rem);
+  color: white;
+  border-radius: 1.25rem;
+  border: 0.125rem solid;
+}
+.platform-24 .efec1.caaa3,
+.platform-24 .efec1:active {
+  background: var(--color-linear-gradient-button);
+  color: white;
+}
+.platform-24 .efec1:not(.caaa3):hover {
+  transition-duration: var(--transition-duration);
+  background: none;
+  color: var(--color-purple);
+}
+.platform-24 .efec1.caaa3 {
+  background: var(--color-linear-gradient-button);
 }
 
 .wrapper {
