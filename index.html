@@ -144,8 +144,8 @@
                     />
                 </div>
             </div>
+            <div class="platform-24 container"></div>
         </div>
-        <div class="platform-24"></div>
 
     </main>
     <footer class="footer">
@@ -233,20 +233,22 @@
                         </li>
                     </ul>
                 </div>
+
              </div>
         </div>
+
+        <!-- Platform24 widget -->
+        <script>
+            (function(p,l,a,t,f,o,r,m){p[o]=p[o]||function(){(p[o].p=p[o].p||arguments[0])};r=l.createElement(t),m=l.getElementsByTagName(a)[0],r.async=1,r.src=f,r.onload=function(){p.p24WidgetManager(p[o].p)};m.appendChild(r,m)})(window,document,'head','script','https://widget.p24.app/manager.js','p24wm');
+
+            p24wm({
+                "app": "925c9d84-80ad-43ab-a750-40fca0050540",
+                "baseUrl": "https://widget.p24.app",
+                "schedule": ".platform-24"
+            })
+        </script>
+        <!-- Platform24 widget -->
     </footer>
     <script src="./scripts/slider.js"></script>
-    <script>
-        (function(p,l,a,t,f,o,r,m){p[o]=p[o]||function(){(p[o].p=p[o].p||arguments[0])};r=l.createElement(t),m=l.getElementsByTagName(a)[0],r.async=1,r.src=f,r.onload=function(){p.p24WidgetManager(p[o].p)};m.appendChild(r,m)})(window,document,'head','script','https://widget.p24.app/manager.js?v=081','p24wm');
-
-        p24wm({
-            "app": "925c9d84-80ad-43ab-a750-40fca0050540",
-            "widgetType": "activities",
-            "baseUrl": "https://widget.p24.app",
-            "activities": ".platform-24"
-        })
-    </script>
-    <!-- Platform24 widget -->
 </body>
 </html>
