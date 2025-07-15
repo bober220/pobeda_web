@@ -652,7 +652,6 @@ a[aria-label]::before, button[aria-label]::before {
   font-size: clamp(0.6875rem, 0.5061983471rem + 0.7438016529vw, 1.25rem);
   color: white;
   border-radius: 1.25rem;
-  border: 0.125rem solid;
 }
 @media (width <= 47.99875rem) {
   .platform-24 {
