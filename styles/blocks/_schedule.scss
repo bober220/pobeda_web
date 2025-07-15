@@ -15,7 +15,7 @@
     font-size: fluid(20, 11);
     color: white;
     border-radius: rem(20);
-
+    border: #{rem(2)} solid;
   }
 
   @include mobile{
