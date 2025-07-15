@@ -645,7 +645,6 @@ a[aria-label]::before, button[aria-label]::before {
   justify-content: center; /* Горизонтальное выравнивание */
   align-items: center; /* Вертикальное выравнивание */
   text-align: center; /* Дополнительно для текста */
-  width: 11.875rem;
   margin: 0.9375rem 0.625rem; /* Внешние отступы: 15 сверху/снизу, 10 по бокам */
   padding: 0.625rem 1.25rem;
   background-color: var(--color-background-header-footer);
