@@ -654,6 +654,12 @@ a[aria-label]::before, button[aria-label]::before {
   border-radius: 1.25rem;
   border: 0.125rem solid;
 }
+@media (width <= 47.99875rem) {
+  .platform-24 {
+    margin-top: 0;
+    margin-top: 0.3125rem;
+  }
+}
 .platform-24 .efec1.caaa3,
 .platform-24 .efec1:active {
   background: var(--color-linear-gradient-button);

@@ -18,6 +18,11 @@
     border: #{rem(2)} solid;
   }
 
+  @include mobile{
+    margin-top: 0;
+    margin-top: rem(5);
+  }
+
   .efec1.caaa3,
   .efec1:active {
     background: var(--color-linear-gradient-button);
