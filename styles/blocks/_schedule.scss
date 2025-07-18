@@ -1,8 +1,12 @@
 @use '../helpers' as *;
 
 .platform-24 {
-  padding: 0;
   margin-top: rem(100);
+
+
+  @include mobile{
+    padding: 0;
+  }
 
   .efec1 {
     display: flex;
@@ -57,10 +61,33 @@
         font-size: rem(11);
       }
     }
-  }
+
+    .d94d7 {
+      color: var(--color-white);
+      border: #{rem(3)} solid var(--color-white);
+    }
+
+    .d94d7::after{
+      height: 0%;
+
+    }
+
+    .df744{
+      color: var(--color-white);
+    }
+
+    .ef4d0:hover .bd6d0,
+    .ef4d0:hover .df744 {
+      color:var(--color-purple)
+    }
 
 
-}
+    }
+
+
+    }
+
+
 
 
 

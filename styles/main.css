@@ -638,8 +638,12 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .platform-24 {
-  padding: 0;
   margin-top: 6.25rem;
+}
+@media (width <= 47.99875rem) {
+  .platform-24 {
+    padding: 0;
+  }
 }
 .platform-24 .efec1 {
   display: flex;
@@ -691,6 +695,20 @@ a[aria-label]::before, button[aria-label]::before {
   .platform-24 .activity .da163 {
     font-size: 0.6875rem;
   }
+}
+.platform-24 .activity .d94d7 {
+  color: var(--color-white);
+  border: 0.1875rem solid var(--color-white);
+}
+.platform-24 .activity .d94d7::after {
+  height: 0%;
+}
+.platform-24 .activity .df744 {
+  color: var(--color-white);
+}
+.platform-24 .activity .ef4d0:hover .bd6d0,
+.platform-24 .activity .ef4d0:hover .df744 {
+  color: var(--color-purple);
 }
 
 .wrapper {
