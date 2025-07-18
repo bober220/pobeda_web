@@ -673,6 +673,24 @@ a[aria-label]::before, button[aria-label]::before {
 .platform-24 .efec1.caaa3 {
   background: var(--color-linear-gradient-button);
 }
+.platform-24 .activity .c3d34 {
+  width: 15.625rem;
+  border-radius: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .platform-24 .activity .c3d34 {
+    width: 9.375rem;
+  }
+}
+.platform-24 .activity .da163 {
+  font-size: 1.25rem;
+  font-family: var(--font-family-info);
+}
+@media (width <= 47.99875rem) {
+  .platform-24 .activity .da163 {
+    font-size: 0.6875rem;
+  }
+}
 
 .wrapper {
   max-width: 96.875rem;

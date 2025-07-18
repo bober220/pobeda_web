@@ -38,8 +38,28 @@
   .efec1.caaa3 {
     background: var(--color-linear-gradient-button);
   }
-}
 
+  .activity{
+    .c3d34{
+      width: rem(250);
+      border-radius: rem(20);
+
+      @include mobile{
+        width: rem(150);
+      }
+    }
+    .da163 {
+      font-size: rem(20);
+      font-family: var(--font-family-info);
+
+      @include mobile{
+        font-size: rem(11);
+      }
+    }
+  }
+
+
+}
 
 
 
