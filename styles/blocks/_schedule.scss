@@ -76,9 +76,25 @@
       color: var(--color-white);
     }
 
+    .ef4d0{
+      width: rem(175);
+      padding: rem(10);
+      border: #{rem(2)} solid;
+      border-radius: rem(10);
+      background: var(--color-linear-gradient-button);
+    }
+
+    .ef4d0:hover{
+      background: none;
+    }
+
     .ef4d0:hover .bd6d0,
     .ef4d0:hover .df744 {
-      color:var(--color-purple)
+      color:var(--color-purple);
+    }
+
+    .ad196{
+      color: white;
     }
 
 

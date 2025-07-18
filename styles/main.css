@@ -706,9 +706,22 @@ a[aria-label]::before, button[aria-label]::before {
 .platform-24 .activity .df744 {
   color: var(--color-white);
 }
+.platform-24 .activity .ef4d0 {
+  width: 10.9375rem;
+  padding: 0.625rem;
+  border: 0.125rem solid;
+  border-radius: 0.625rem;
+  background: var(--color-linear-gradient-button);
+}
+.platform-24 .activity .ef4d0:hover {
+  background: none;
+}
 .platform-24 .activity .ef4d0:hover .bd6d0,
 .platform-24 .activity .ef4d0:hover .df744 {
   color: var(--color-purple);
+}
+.platform-24 .activity .ad196 {
+  color: white;
 }
 
 .wrapper {
