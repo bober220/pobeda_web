@@ -713,6 +713,11 @@ a[aria-label]::before, button[aria-label]::before {
   border-radius: 0.625rem;
   background: var(--color-linear-gradient-button);
 }
+@media (width <= 47.99875rem) {
+  .platform-24 .activity .ef4d0 {
+    width: 8.75rem;
+  }
+}
 .platform-24 .activity .ef4d0:hover {
   background: none;
 }

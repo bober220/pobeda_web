@@ -79,9 +79,14 @@
     .ef4d0{
       width: rem(175);
       padding: rem(10);
+
       border: #{rem(2)} solid;
       border-radius: rem(10);
       background: var(--color-linear-gradient-button);
+
+      @include mobile{
+        width: rem(140)
+      }
     }
 
     .ef4d0:hover{
