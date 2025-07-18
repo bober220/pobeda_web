@@ -65,6 +65,10 @@
     .d94d7 {
       color: var(--color-white);
       border: #{rem(3)} solid var(--color-white);
+
+      @include mobile{
+        border: #{rem(1.5)} solid var(--color-white);
+      }
     }
 
     .d94d7::after{
