@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* Стиль кнопки */
+.accessibility-btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 9999;
+  padding: 0.625rem 0.9375rem;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.accessibility-btn:hover {
+  background: #003d7a;
+}
+
+/* Стили для режима доступности */
+body.accessibility-mode {
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+body.accessibility-mode * {
+  color: inherit !important;
+  background: transparent !important;
+}
+
+body.accessibility-mode a {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+body.accessibility-mode img {
+  filter: contrast(120%) !important;
+}
+
+/*# sourceMappingURL=eye.css.map */
