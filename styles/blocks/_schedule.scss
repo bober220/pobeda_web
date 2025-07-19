@@ -80,18 +80,24 @@
       color: var(--color-white);
     }
 
-    .ef4d0{
+    .aa329{
+      gap: 2em;
+    }
+
+    .ef4d0 {
       width: rem(175);
       padding: rem(10);
-
       border: #{rem(2)} solid;
       border-radius: rem(10);
       background: var(--color-linear-gradient-button);
 
-      @include mobile{
-        width: rem(140)
+      @include mobile {
+        width: rem(140);
+        margin: rem(8); // Можно задать другие отступы для мобильной версии
       }
     }
+
+
 
     .ef4d0:hover{
       background: none;

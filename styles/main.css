@@ -711,6 +711,9 @@ a[aria-label]::before, button[aria-label]::before {
 .platform-24 .activity .df744 {
   color: var(--color-white);
 }
+.platform-24 .activity .aa329 {
+  gap: 2em;
+}
 .platform-24 .activity .ef4d0 {
   width: 10.9375rem;
   padding: 0.625rem;
@@ -721,6 +724,7 @@ a[aria-label]::before, button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .platform-24 .activity .ef4d0 {
     width: 8.75rem;
+    margin: 0.5rem;
   }
 }
 .platform-24 .activity .ef4d0:hover {
@@ -1000,24 +1004,107 @@ body.accessibility-mode img {
 }
 
 .info-block {
-  display: flex;
+  margin-top: 8.125rem;
+  margin-bottom: 11.875rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
-
-.gradient {
+.info-block .gradient {
   background: var(--color-accent-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline;
 }
-
-h4 {
+.info-block h1 {
+  margin: 1.875rem 0;
+  padding: 0;
+}
+.info-block p {
+  margin-bottom: 1.875rem;
   font-family: var(--font-family-info);
+  font-size: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .info-block p {
+    display: none;
+  }
+}
+.info-block .photo-block {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Центральная — "Развлечения" */
+  /* Сверху слева — "Выставки" */
+  /* Сверху справа — "Экскурсии" */
+  /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
+  /* Снизу справа — "Новый год" */
+}
+.info-block .photo-block [class^=photo] {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
+}
+.info-block .photo-block [class^=photo] img {
+  margin-bottom: 5px;
+  border-radius: 0.625rem;
+}
+.info-block .photo-block [class^=photo] p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+}
+.info-block .photo-block .photo1 {
+  transform: rotate(-6deg);
+  z-index: 2; /* Теперь ниже боковых */
+  background-color: #8B39E9;
+  border-radius: 0.625rem;
+}
+.info-block .photo-block .photo2 {
+  top: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%) rotate(3deg);
+  z-index: 3;
+  background-color: #14587e;
+  border-radius: 0.625rem;
+}
+.info-block .photo-block .photo3 {
+  top: 10%;
+  right: 15%;
+  transform: translate(50%, -50%) rotate(-6deg);
+  z-index: 3;
+  background-color: #C15151;
+  border-radius: 0.625rem;
+}
+.info-block .photo-block .photo4 {
+  bottom: 10%;
+  left: 18%;
+  transform: translate(-50%, 50%) rotate(-12deg);
+  z-index: 3;
+  background-color: #197900;
+  border-radius: 0.625rem;
+}
+.info-block .photo-block .photo5 {
+  bottom: 10%;
+  right: 15%;
+  transform: translate(50%, 50%) rotate(6deg);
+  z-index: 3;
+  background-color: #005AA4;
+  border-radius: 0.625rem;
 }
 
 .application {
   display: inline-flex;
   justify-content: center;
+  max-width: 19.375rem;
+  width: 100%;
   padding: 1.25rem 1.25rem;
   background: var(--color-linear-gradient-button);
   font-size: 1.5rem;
