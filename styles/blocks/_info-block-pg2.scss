@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+
+.info-block{
+  display: flex;
+
+
+
+
+}
+
+.gradient{
+  background: var(--color-accent-text);
+  -webkit-background-clip: text; // Для Safari/Chrome
+  background-clip: text;
+  color: transparent; // чтобы был виден градиент
+  display: inline; // Важно для корректного отображения
+}
+
+h4{
+  font-family: var(--font-family-info);
+}

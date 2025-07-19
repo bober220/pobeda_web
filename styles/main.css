@@ -957,4 +957,99 @@ a[aria-label]::before, button[aria-label]::before {
   }
 }
 
+/* Стиль кнопки */
+.accessibility-btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 9999;
+  padding: 0.625rem 0.9375rem;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.accessibility-btn:hover {
+  background: #003d7a;
+}
+
+/* Стили для режима доступности */
+body.accessibility-mode {
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+body.accessibility-mode * {
+  color: inherit !important;
+  background: transparent !important;
+}
+
+body.accessibility-mode a {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+body.accessibility-mode img {
+  filter: contrast(120%) !important;
+}
+
+.info-block {
+  display: flex;
+}
+
+.gradient {
+  background: var(--color-accent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+h4 {
+  font-family: var(--font-family-info);
+}
+
+.application {
+  display: inline-flex;
+  justify-content: center;
+  padding: 1.25rem 1.25rem;
+  background: var(--color-linear-gradient-button);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-family: var(--font-family-info);
+  white-space: nowrap;
+  border: 0.125rem solid;
+  border-radius: 1.5625rem;
+}
+@media (width <= 90.06125rem) {
+  .application {
+    padding: 0.25rem 0.8125rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
+  }
+}
+@media (any-hover: hover) {
+  .application:hover {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+    background: none;
+  }
+}
+@media (any-hover: none) {
+  .application:active {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+    background: none;
+  }
+}
+.application--accent {
+  color: var(--color-purple);
+}
+
 /*# sourceMappingURL=main.css.map */

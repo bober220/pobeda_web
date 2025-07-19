@@ -1,0 +1,43 @@
+@use '../helpers' as *;
+
+/* Стиль кнопки */
+.accessibility-btn {
+  position: fixed;
+  bottom: rem(20);
+  right: rem(20);
+  z-index: 9999;
+  padding: rem(10) rem(15);
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: rem(15);
+  cursor: pointer;
+  font-size: rem(16);
+  transition: all 0.3s;
+}
+
+.accessibility-btn:hover {
+  background: #003d7a;
+}
+
+/* Стили для режима доступности */
+body.accessibility-mode {
+  font-size: rem(20) !important;
+  line-height: 1.8 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+body.accessibility-mode * {
+  color: inherit !important;
+  background: transparent !important;
+}
+
+body.accessibility-mode a {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+body.accessibility-mode img {
+  filter: contrast(120%) !important;
+}
