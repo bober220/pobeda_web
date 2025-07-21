@@ -2,18 +2,18 @@
 
 .platform-24 {
   margin-top: rem(100);
+
+
+  @include mobile{
+    padding: 0;
+  }
+
   .e4bf7.cf43c::before{
     background-image: none;
   }
   .e4bf7.f09ad::before {
     background-image: none;
   }
-
-  @include mobile{
-    padding: 0;
-  }
-
-
 
   .efec1 {
     display: flex;
@@ -28,6 +28,10 @@
     color: white;
     border-radius: rem(20);
     border: #{rem(2)} solid;
+
+    @include mobile{
+      margin: rem(15) rem(5);
+    }
   }
 
   @include mobile{
@@ -89,6 +93,9 @@
 
     .aa329{
       gap: 2em;
+      @include mobile{
+        gap: 0;
+      }
     }
 
     .ef4d0 {
@@ -118,8 +125,6 @@
     .ad196{
       color: white;
     }
-
-
 
 
     }

@@ -649,16 +649,16 @@ a[aria-label]::before, button[aria-label]::before {
 .platform-24 {
   margin-top: 6.25rem;
 }
+@media (width <= 47.99875rem) {
+  .platform-24 {
+    padding: 0;
+  }
+}
 .platform-24 .e4bf7.cf43c::before {
   background-image: none;
 }
 .platform-24 .e4bf7.f09ad::before {
   background-image: none;
-}
-@media (width <= 47.99875rem) {
-  .platform-24 {
-    padding: 0;
-  }
 }
 .platform-24 .efec1 {
   display: flex;
@@ -673,6 +673,11 @@ a[aria-label]::before, button[aria-label]::before {
   color: white;
   border-radius: 1.25rem;
   border: 0.125rem solid;
+}
+@media (width <= 47.99875rem) {
+  .platform-24 .efec1 {
+    margin: 0.9375rem 0.3125rem;
+  }
 }
 @media (width <= 47.99875rem) {
   .platform-24 {
@@ -728,6 +733,11 @@ a[aria-label]::before, button[aria-label]::before {
 }
 .platform-24 .activity .aa329 {
   gap: 2em;
+}
+@media (width <= 47.99875rem) {
+  .platform-24 .activity .aa329 {
+    gap: 0;
+  }
 }
 .platform-24 .activity .ef4d0 {
   width: 10.9375rem;
