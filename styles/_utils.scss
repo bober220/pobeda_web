@@ -2,8 +2,14 @@
 
 .container{
   max-width: calc(var(--container-width-main) + var(--container-padding-x-main) * 2);
-  margin-inline: auto;
+  margin-inline: 0;
   padding-inline: var(--container-padding-x-main);
+
+  @include laptop{
+    max-width: calc(var(--container-width-laptop) + var(--container-padding-x-laptop) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x-laptop);
+  }
 
   @include mobile{
     max-width: calc(var(--container-width-mobile) + var(--container-padding-x-mobile) * 2);

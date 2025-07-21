@@ -255,6 +255,8 @@ svg * {
   --font-family-accant: "AbhayaLibre", "sans-serif";
   --container-width-main: 105rem;
   --container-padding-x-main: 3.125rem;
+  --container-width-laptop: 105rem;
+  --container-padding-x-laptop: 3.125rem;
   --container-width-mobile: 47.99875rem;
   --container-padding-x-mobile: 1rem;
   --transition-duration: 0.2s;
@@ -268,8 +270,15 @@ svg * {
 
 .container {
   max-width: calc(var(--container-width-main) + var(--container-padding-x-main) * 2);
-  margin-inline: auto;
+  margin-inline: 0;
   padding-inline: var(--container-padding-x-main);
+}
+@media (width <= 90.06125rem) {
+  .container {
+    max-width: calc(var(--container-width-laptop) + var(--container-padding-x-laptop) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x-laptop);
+  }
 }
 @media (width <= 47.99875rem) {
   .container {
@@ -639,6 +648,12 @@ a[aria-label]::before, button[aria-label]::before {
 
 .platform-24 {
   margin-top: 6.25rem;
+}
+.platform-24 .e4bf7.cf43c::before {
+  background-image: none;
+}
+.platform-24 .e4bf7.f09ad::before {
+  background-image: none;
 }
 @media (width <= 47.99875rem) {
   .platform-24 {
