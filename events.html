@@ -12,6 +12,15 @@
     <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"
+    ></script>
+    <script
+        type="text/javascript"
+        src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <header class="header" data-js-header>
         <div class="header__body">
             <div class="header__body-inner container">
@@ -82,51 +91,110 @@
     </header>
 
     <main class="container">
-        <div class="info-block container">
-            <div class="text-block"><h1>
-                МЫ ОРГАНИЗУЕМ ДЛЯ ВАС НЕЗАБЫВАЕМЫЙ <span class="gradient">ПРАЗДНИК</span>
-                </h1>
-                <p>
-                    Кино-досуговый центр «Победа» превратит ваш праздник в волшебное событие!
-                    Яркие эмоции, безупречная организация и неповторимая атмосфера – мы создадим для вас момент, который запомнится навсегда.
-                </p>
-                <button class="application">
-                    ОСАТАВИТЬ ЗАЯВКУ
-                </button></div>
-            <div class="photo-block">
-                <div class="photo1">
-                    <img src="images/image19.svg"
-                         alt=""
-                    />
-                    <p>Развлечения</p>
+        <div class="events">
+            <div class="info-block">
+                <div class="text-block">
+                    <h1>
+                        МЫ ОРГАНИЗУЕМ ДЛЯ ВАС НЕЗАБЫВАЕМЫЙ <span class="gradient">ПРАЗДНИК</span>
+                    </h1>
+                    <p>
+                        Кино-досуговый центр «Победа» превратит ваш праздник в волшебное событие!
+                        Яркие эмоции, безупречная организация и неповторимая атмосфера – мы создадим для вас момент, который запомнится навсегда.
+                    </p>
+                    <button class="application">
+                        ОСАТАВИТЬ ЗАЯВКУ
+                    </button></div>
+                <div class="photo-block">
+                    <div class="photo1">
+                        <img src="images/image19.svg"
+                             alt=""
+                        />
+                        <p>Развлечения</p>
+                    </div>
+                    <div class="photo2">
+                        <img src="images/image19.svg"
+                             alt=""
+                        />
+                        <p>Выставки</p>
+                    </div>
+                    <div class="photo3">
+                        <img src="images/image19.svg"
+                             alt=""
+                        />
+                        <p>Экскурсии</p>
+                    </div>
+                    <div class="photo4">
+                        <img src="images/image19.svg"
+                             alt=""
+                        />
+                        <p>Выездные <br>поздравления</br></p>
+                    </div>
+                    <div class="photo5">
+                        <img class="logo__image"
+                             src="images/image19.svg"
+                             alt=""
+                        />
+                        <p>Новый год</p>
+                    </div>
                 </div>
-                <div class="photo2">
-                    <img src="images/image19.svg"
-                         alt=""
-                    />
-                    <p>Выставки</p>
-                </div>
-                <div class="photo3">
-                    <img src="images/image19.svg"
-                         alt=""
-                    />
-                    <p>Экскурсии</p>
-                </div>
-                <div class="photo4">
-                    <img src="images/image19.svg"
-                         alt=""
-                    />
-                    <p>Выездные <br>поздравления</br></p>
-                </div>
-                <div class="photo5">
-                    <img class="logo__image"
-                         src="images/image19.svg"
-                         alt=""
-                    />
-                    <p>Новый год</p>
+            </div>
+            <div class="birthday">
+                <h1>ШИРОКЙИ ВЫБОР ТЕМАТИК <span class="gradient">ДНЯ РОЖДЕНИЯ</span></h1>
+                <div class="wrapper">
+                    <h2 class="neon-title">ТакТок вечеринка</h2>
+                    <p class="neon-subtitle">Зажигательные танцы, вирусные челленджи и неоновый рейв в стиле главного тренда!</p>
+
+                    <div class="slider loading">
+                        <div class="slider__item">
+                            <img
+                                    src="./images/9cT7od70AIc%202.svg"
+                                    alt=""
+                                    width=""
+                                    height=""
+                                    loading="lazy"
+                            />
+                        </div>
+                        <div class="slider__item">
+                            <img
+                                    src="./images/e57a0e82e3f157547839bc100f69015b%201.svg"
+                                    alt=""
+                                    width=""
+                                    height=""
+                                    loading="lazy"
+                            />
+                        </div>
+                        <div class="slider__item">
+                            <img
+                                    src="./images/image_c2845bcccda994916228b3075a77c2e6%201.svg"
+                                    alt=""
+                                    width=""
+                                    height=""
+                                    loading="lazy"
+                            />
+                        </div>
+                        <div class="slider__item">
+                            <img
+                                    src="./images/w1500_54803203%201.svg"
+                                    alt=""
+                                    width=""
+                                    height=""
+                                    loading="lazy"
+                            />
+                        </div>
+                        <div class="slider__item">
+                            <img
+                                    src="./images/Шаблон-Исилькульский%201.svg"
+                                    alt=""
+                                    width=""
+                                    height=""
+                                    loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
 
     </main>
 
@@ -218,19 +286,7 @@
 
             </div>
         </div>
-
-        <!-- Platform24 widget -->
-        <script>
-            (function(p,l,a,t,f,o,r,m){p[o]=p[o]||function(){(p[o].p=p[o].p||arguments[0])};r=l.createElement(t),m=l.getElementsByTagName(a)[0],r.async=1,r.src=f,r.onload=function(){p.p24WidgetManager(p[o].p)};m.appendChild(r,m)})(window,document,'head','script','https://widget.p24.app/manager.js','p24wm');
-
-            p24wm({
-                "app": "925c9d84-80ad-43ab-a750-40fca0050540",
-                "baseUrl": "https://widget.p24.app",
-                "schedule": ".platform-24"
-            })
-        </script>
-        <!-- Platform24 widget -->
-
+        <script src="scripts/slider-pg2.js"></script>
     </footer>
 </body>
 </html>

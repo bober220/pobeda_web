@@ -1028,19 +1028,51 @@ body.accessibility-mode img {
   filter: contrast(120%) !important;
 }
 
-.info-block {
+.events .gradient {
+  background: var(--color-accent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+.events h1 {
+  margin: 1.875rem 0;
+  padding: 0;
+}
+@media (width <= 96.875rem) {
+  .events h1 {
+    font-size: 2.8125rem;
+    margin-top: -3.75rem;
+  }
+}
+@media (width <= 47.9375rem) {
+  .events h1 {
+    font-size: 1.875rem;
+  }
+}
+.events p {
+  margin-bottom: 1.875rem;
+  font-family: var(--font-family-info);
+  font-size: 1.25rem;
+}
+@media (width <= 47.9375rem) {
+  .events p {
+    display: none;
+  }
+}
+.events .info-block {
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin-top: 8.125rem;
   margin-bottom: 11.875rem;
 }
 @media (width <= 96.875rem) {
-  .info-block {
+  .events .info-block {
     margin-top: 9.375rem;
   }
 }
 @media (width <= 47.9375rem) {
-  .info-block {
+  .events .info-block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1049,39 +1081,7 @@ body.accessibility-mode img {
     margin-top: 6.25rem;
   }
 }
-.info-block .gradient {
-  background: var(--color-accent-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline;
-}
-.info-block h1 {
-  margin: 1.875rem 0;
-  padding: 0;
-}
-@media (width <= 96.875rem) {
-  .info-block h1 {
-    font-size: 2.8125rem;
-    margin-top: -3.75rem;
-  }
-}
-@media (width <= 47.9375rem) {
-  .info-block h1 {
-    font-size: 1.5625rem;
-  }
-}
-.info-block p {
-  margin-bottom: 1.875rem;
-  font-family: var(--font-family-info);
-  font-size: 1.25rem;
-}
-@media (width <= 47.9375rem) {
-  .info-block p {
-    display: none;
-  }
-}
-.info-block .photo-block {
+.events .info-block .photo-block {
   position: relative;
   width: 100%;
   height: 31.25rem;
@@ -1095,16 +1095,16 @@ body.accessibility-mode img {
   /* Снизу справа — "Новый год" */
 }
 @media (width <= 96.875rem) {
-  .info-block .photo-block {
+  .events .info-block .photo-block {
     height: 18.75rem;
   }
 }
 @media (width <= 47.9375rem) {
-  .info-block .photo-block {
+  .events .info-block .photo-block {
     display: none;
   }
 }
-.info-block .photo-block [class^=photo] {
+.events .info-block .photo-block [class^=photo] {
   position: absolute;
   padding: 10px;
   display: flex;
@@ -1112,23 +1112,23 @@ body.accessibility-mode img {
   align-items: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
 }
-.info-block .photo-block [class^=photo] img {
+.events .info-block .photo-block [class^=photo] img {
   margin-bottom: 5px;
   border-radius: 0.625rem;
 }
-.info-block .photo-block [class^=photo] p {
+.events .info-block .photo-block [class^=photo] p {
   color: white;
   text-align: center;
   margin: 0;
   font-size: 1.25rem;
 }
-.info-block .photo-block .photo1 {
+.events .info-block .photo-block .photo1 {
   transform: rotate(-6deg);
   z-index: 2; /* Теперь ниже боковых */
   background-color: #8B39E9;
   border-radius: 0.625rem;
 }
-.info-block .photo-block .photo2 {
+.events .info-block .photo-block .photo2 {
   top: 10%;
   left: 15%;
   transform: translate(-50%, -50%) rotate(3deg);
@@ -1136,7 +1136,7 @@ body.accessibility-mode img {
   background-color: #14587e;
   border-radius: 0.625rem;
 }
-.info-block .photo-block .photo3 {
+.events .info-block .photo-block .photo3 {
   top: 10%;
   right: 15%;
   transform: translate(50%, -50%) rotate(-6deg);
@@ -1144,7 +1144,7 @@ body.accessibility-mode img {
   background-color: #C15151;
   border-radius: 0.625rem;
 }
-.info-block .photo-block .photo4 {
+.events .info-block .photo-block .photo4 {
   bottom: 10%;
   left: 18%;
   transform: translate(-50%, 50%) rotate(-12deg);
@@ -1152,7 +1152,7 @@ body.accessibility-mode img {
   background-color: #197900;
   border-radius: 0.625rem;
 }
-.info-block .photo-block .photo5 {
+.events .info-block .photo-block .photo5 {
   bottom: 10%;
   right: 15%;
   transform: translate(50%, 50%) rotate(6deg);
@@ -1161,46 +1161,63 @@ body.accessibility-mode img {
   border-radius: 0.625rem;
 }
 @media (width <= 96.875rem) {
-  .info-block .photo-block {
+  .events .info-block .photo-block {
     height: 18.75rem;
   }
-  .info-block .photo-block [class^=photo] {
+  .events .info-block .photo-block [class^=photo] {
     padding: 0.625rem;
     width: 15.625rem;
     height: 20rem;
   }
-  .info-block .photo-block [class^=photo] img {
+  .events .info-block .photo-block [class^=photo] img {
     width: 21.25rem;
     height: auto;
   }
-  .info-block .photo-block [class^=photo] p {
+  .events .info-block .photo-block [class^=photo] p {
     font-size: 1.4375rem;
   }
-  .info-block .photo-block .photo1 {
+  .events .info-block .photo-block .photo1 {
     transform: rotate(-6deg) scale(0.7);
   }
-  .info-block .photo-block .photo2 {
+  .events .info-block .photo-block .photo2 {
     top: 3%;
     left: 15%;
     transform: translate(-50%, -50%) rotate(3deg) scale(0.7);
   }
-  .info-block .photo-block .photo3 {
+  .events .info-block .photo-block .photo3 {
     top: 3%;
     right: 16%;
     transform: translate(50%, -50%) rotate(-6deg) scale(0.7);
   }
-  .info-block .photo-block .photo4 {
+  .events .info-block .photo-block .photo4 {
     bottom: 3%;
     left: 18%;
     transform: translate(-50%, 50%) rotate(-12deg) scale(0.7);
   }
-  .info-block .photo-block .photo5 {
+  .events .info-block .photo-block .photo5 {
     bottom: 3%;
     right: 15%;
     transform: translate(50%, 50%) rotate(6deg) scale(0.7);
   }
 }
-
+.events .birthday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 6.25rem;
+}
+@media (width <= 96.875rem) {
+  .events .birthday {
+    padding-top: 7.5rem;
+  }
+}
+@media (width <= 47.9375rem) {
+  .events .birthday {
+    padding-top: 1.25rem;
+  }
+}
 .application {
   display: inline-flex;
   justify-content: center;
@@ -1239,6 +1256,70 @@ body.accessibility-mode img {
 }
 .application--accent {
   color: var(--color-purple);
+}
+
+.slider {
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-drag: none;
+  overflow: hidden;
+  border-radius: 3.125rem;
+  margin: 0 auto;
+  transition: border-radius 0.3s ease;
+  background: linear-gradient(145deg, #ff00ff, #00ffff);
+  box-shadow: 0 0 1.25rem rgba(0, 255, 255, 0.7), 0 0 2.5rem rgba(255, 0, 255, 0.5);
+}
+@media (width <= 47.9375rem) {
+  .slider {
+    max-width: 22.5625rem;
+    max-height: 10.4375rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+  }
+}
+@media (width <= 96.875rem) {
+  .slider {
+    max-width: 75rem;
+  }
+}
+@media (width >= 96.875rem) {
+  .slider {
+    max-width: 83rem;
+    max-height: 30.75rem;
+  }
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #00ffff;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 3.125rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 0.0625rem rgba(255, 0, 255, 0.5), 0 0 0.3125rem rgba(0, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 0.3125rem #00ffff;
+}
+.slider .slick-arrow:hover {
+  background: rgba(255, 0, 255, 0.3);
+  color: #ffffff;
+  box-shadow: 0 0 0.9375rem rgb(255, 0, 255), 0 0 1.5625rem rgba(0, 255, 255, 0.8);
+}
+@media (width <= 47.9375rem) {
+  .slider .slick-arrow {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,25 +1,6 @@
 @use '../helpers' as *;
 
-.info-block{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: rem(130);
-  margin-bottom: rem(190);
-
-  @include laptop{
-    margin-top: rem(150);
-  }
-
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: rem(100);
-  }
-
-
+.events{
   .gradient{
     background: var(--color-accent-text);
     -webkit-background-clip: text; // Для Safari/Chrome
@@ -38,7 +19,7 @@
     }
 
     @include mobile{
-      font-size: rem(25);
+      font-size: rem(30);
     }
   }
 
@@ -52,143 +33,189 @@
     }
   }
 
-
-  .photo-block {
-    position: relative;
-    width: 100%;
-    height: rem(500);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .info-block{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: rem(130);
+    margin-bottom: rem(190);
 
     @include laptop{
-      height: rem(300);
+      margin-top: rem(150);
     }
 
-    @include mobile{
-      display: none;
-    }
-
-    [class^="photo"] {
-      position: absolute;
-      padding: 10px;
+    @include mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
+      justify-content: center;
+      text-align: center;
+      margin-top: rem(100);
+    }
 
-      img {
-        margin-bottom: 5px;
-        border-radius: rem(10);
+    .photo-block {
+      position: relative;
+      width: 100%;
+      height: rem(500);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      @include laptop{
+        height: rem(300);
       }
 
-      p {
-        color: white;
-        text-align: center;
-        margin: 0;
-        font-size: rem(20);
+      @include mobile{
+        display: none;
       }
-    }
-
-    /* Центральная — "Развлечения" */
-    .photo1 {
-      transform: rotate(-6deg);
-      z-index: 2; /* Теперь ниже боковых */
-      background-color: #8B39E9;
-      border-radius: rem(10);
-    }
-
-    /* Сверху слева — "Выставки" */
-    .photo2 {
-      top: 10%;
-      left: 15%;
-      transform: translate(-50%, -50%) rotate(3deg);
-      z-index: 3;
-      background-color: #14587e;
-      border-radius: rem(10);
-    }
-
-    /* Сверху справа — "Экскурсии" */
-    .photo3 {
-      top: 10%;
-      right: 15%;
-      transform: translate(50%, -50%) rotate(-6deg);
-      z-index: 1;
-      background-color: #C15151;
-      border-radius: rem(10);
-    }
-
-    /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
-    .photo4 {
-      bottom: 10%;
-      left: 18%;
-      transform: translate(-50%, 50%) rotate(-12deg);
-      z-index: 1;
-      background-color: #197900;
-      border-radius: rem(10);
-    }
-
-    /* Снизу справа — "Новый год" */
-    .photo5 {
-      bottom: 10%;
-      right: 15%;
-      transform: translate(50%, 50%) rotate(6deg);
-      z-index: 3;
-      background-color: #005AA4;
-      border-radius: rem(10);
-    }
-
-    @include laptop{
-      height: rem(300);
 
       [class^="photo"] {
-        padding: rem(10);
-        width: rem(250);
-        height: rem(320);
+        position: absolute;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
+
         img {
-          width: rem(340);
-          height: auto;
+          margin-bottom: 5px;
+          border-radius: rem(10);
         }
 
         p {
-          font-size: rem(23);
+          color: white;
+          text-align: center;
+          margin: 0;
+          font-size: rem(20);
         }
       }
 
-      // Центральная — "Развлечения"
+      /* Центральная — "Развлечения" */
       .photo1 {
-        transform: rotate(-6deg) scale(0.7);
+        transform: rotate(-6deg);
+        z-index: 2; /* Теперь ниже боковых */
+        background-color: #8B39E9;
+        border-radius: rem(10);
       }
 
-      // Сверху слева — "Выставки"
+      /* Сверху слева — "Выставки" */
       .photo2 {
-        top: 3%;
+        top: 10%;
         left: 15%;
-        transform: translate(-50%, -50%) rotate(3deg) scale(0.7);
+        transform: translate(-50%, -50%) rotate(3deg);
+        z-index: 3;
+        background-color: #14587e;
+        border-radius: rem(10);
       }
 
-      // Сверху справа — "Экскурсии"
+      /* Сверху справа — "Экскурсии" */
       .photo3 {
-        top: 3%;
-        right: 16%;
-        transform: translate(50%, -50%) rotate(-6deg) scale(0.7);
-      }
-
-      // Снизу слева — "Внезапное поздравление"
-      .photo4 {
-        bottom: 3%;
-        left: 18%;
-        transform: translate(-50%, 50%) rotate(-12deg) scale(0.7);
-      }
-
-      // Снизу справа — "Новый год"
-      .photo5 {
-        bottom: 3%;
+        top: 10%;
         right: 15%;
-        transform: translate(50%, 50%) rotate(6deg) scale(0.7);
+        transform: translate(50%, -50%) rotate(-6deg);
+        z-index: 1;
+        background-color: #C15151;
+        border-radius: rem(10);
+      }
+
+      /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
+      .photo4 {
+        bottom: 10%;
+        left: 18%;
+        transform: translate(-50%, 50%) rotate(-12deg);
+        z-index: 1;
+        background-color: #197900;
+        border-radius: rem(10);
+      }
+
+      /* Снизу справа — "Новый год" */
+      .photo5 {
+        bottom: 10%;
+        right: 15%;
+        transform: translate(50%, 50%) rotate(6deg);
+        z-index: 3;
+        background-color: #005AA4;
+        border-radius: rem(10);
+      }
+
+      @include laptop{
+        height: rem(300);
+
+        [class^="photo"] {
+          padding: rem(10);
+          width: rem(250);
+          height: rem(320);
+          img {
+            width: rem(340);
+            height: auto;
+          }
+
+          p {
+            font-size: rem(23);
+          }
+        }
+
+        // Центральная — "Развлечения"
+        .photo1 {
+          transform: rotate(-6deg) scale(0.7);
+        }
+
+        // Сверху слева — "Выставки"
+        .photo2 {
+          top: 3%;
+          left: 15%;
+          transform: translate(-50%, -50%) rotate(3deg) scale(0.7);
+        }
+
+        // Сверху справа — "Экскурсии"
+        .photo3 {
+          top: 3%;
+          right: 16%;
+          transform: translate(50%, -50%) rotate(-6deg) scale(0.7);
+        }
+
+        // Снизу слева — "Внезапное поздравление"
+        .photo4 {
+          bottom: 3%;
+          left: 18%;
+          transform: translate(-50%, 50%) rotate(-12deg) scale(0.7);
+        }
+
+        // Снизу справа — "Новый год"
+        .photo5 {
+          bottom: 3%;
+          right: 15%;
+          transform: translate(50%, 50%) rotate(6deg) scale(0.7);
+        }
       }
     }
+
+
+
   }
 
+  .birthday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: rem(100);
+
+    @include laptop{
+      padding-top: rem(120);
+    }
+
+    @include mobile{
+      padding-top: rem(20);
+    }
+
+    .slider{
+
+    }
+
+  }
 }
+
+
 
