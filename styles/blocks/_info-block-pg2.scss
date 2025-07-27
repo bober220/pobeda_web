@@ -210,8 +210,23 @@
       padding-top: rem(20);
     }
 
-    .slider{
+    .slider {
+      position: relative;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-drag: none;
+      overflow: hidden;
+      border-radius: 3.125rem;
+      margin: 0 auto;
+      transition: border-radius 0.3s ease;
+      background: linear-gradient(145deg, #ff00ff, #00ffff);
+      box-shadow: 0 0 1.25rem rgba(0, 255, 255, 0.7), 0 0 2.5rem rgba(255, 0, 255, 0.5);
+    }
 
+    @include mobile{
+      .slider {
+        box-shadow: 0 0 0.625rem rgba(0, 255, 255, 0.7), 0 0 1.25rem rgba(255, 0, 255, 0.5);
+      }
     }
 
   }
