@@ -10,6 +10,15 @@
     margin-top: rem(150);
   }
 
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: rem(100);
+  }
+
 
   .gradient{
     background: var(--color-accent-text);
@@ -26,6 +35,10 @@
     @include laptop {
       font-size: rem(45);
       margin-top: rem(-60);
+    }
+
+    @include mobile{
+      font-size: rem(25);
     }
   }
 

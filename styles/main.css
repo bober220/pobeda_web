@@ -1039,6 +1039,16 @@ body.accessibility-mode img {
     margin-top: 9.375rem;
   }
 }
+@media (width <= 47.9375rem) {
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 6.25rem;
+  }
+}
 .info-block .gradient {
   background: var(--color-accent-text);
   -webkit-background-clip: text;
@@ -1054,6 +1064,11 @@ body.accessibility-mode img {
   .info-block h1 {
     font-size: 2.8125rem;
     margin-top: -3.75rem;
+  }
+}
+@media (width <= 47.9375rem) {
+  .info-block h1 {
+    font-size: 1.5625rem;
   }
 }
 .info-block p {
