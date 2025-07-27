@@ -1,16 +1,15 @@
 @use '../helpers' as *;
 
 .info-block{
-  margin-top: rem(130);
-  margin-bottom: rem(190);
   display: grid;
   grid-template-columns: 2fr 1fr;
+  margin-top: rem(130);
+  margin-bottom: rem(190);
 
   @include laptop{
-    margin-top: rem(40);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    margin-top: rem(150);
   }
+
 
   .gradient{
     background: var(--color-accent-text);
@@ -24,8 +23,8 @@
     margin: rem(30) 0;
     padding: 0;
 
-    @include laptop-above {
-      font-size: rem(55);
+    @include laptop {
+      font-size: rem(45);
       margin-top: rem(-60);
     }
   }
@@ -49,7 +48,7 @@
     justify-content: center;
     align-items: center;
 
-    @include laptop-above{
+    @include laptop{
       height: rem(300);
     }
 
@@ -101,7 +100,7 @@
       top: 10%;
       right: 15%;
       transform: translate(50%, -50%) rotate(-6deg);
-      z-index: 3;
+      z-index: 1;
       background-color: #C15151;
       border-radius: rem(10);
     }
@@ -111,7 +110,7 @@
       bottom: 10%;
       left: 18%;
       transform: translate(-50%, 50%) rotate(-12deg);
-      z-index: 3;
+      z-index: 1;
       background-color: #197900;
       border-radius: rem(10);
     }
@@ -124,6 +123,57 @@
       z-index: 3;
       background-color: #005AA4;
       border-radius: rem(10);
+    }
+
+    @include laptop{
+      height: rem(300);
+
+      [class^="photo"] {
+        padding: rem(10);
+        width: rem(250);
+        height: rem(320);
+        img {
+          width: rem(340);
+          height: auto;
+        }
+
+        p {
+          font-size: rem(23);
+        }
+      }
+
+      // Центральная — "Развлечения"
+      .photo1 {
+        transform: rotate(-6deg) scale(0.7);
+      }
+
+      // Сверху слева — "Выставки"
+      .photo2 {
+        top: 3%;
+        left: 15%;
+        transform: translate(-50%, -50%) rotate(3deg) scale(0.7);
+      }
+
+      // Сверху справа — "Экскурсии"
+      .photo3 {
+        top: 3%;
+        right: 16%;
+        transform: translate(50%, -50%) rotate(-6deg) scale(0.7);
+      }
+
+      // Снизу слева — "Внезапное поздравление"
+      .photo4 {
+        bottom: 3%;
+        left: 18%;
+        transform: translate(-50%, 50%) rotate(-12deg) scale(0.7);
+      }
+
+      // Снизу справа — "Новый год"
+      .photo5 {
+        bottom: 3%;
+        right: 15%;
+        transform: translate(50%, 50%) rotate(6deg) scale(0.7);
+      }
     }
   }
 
