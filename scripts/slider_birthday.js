@@ -12,16 +12,11 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next">❯</button>',
 
         // Анимация и поведение
-        speed: 800, // Увеличено для более плавного перехода
-        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)', // Более точная кривая Безье
+        speed: 800,
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
         infinite: true,
         useTransform: true,
-        waitForAnimate: false, // Важно! Отключаем ожидание завершения анимации
-
-        // Отключаем стандартные transition слайдов
-        mobileFirst: true,
-        swipeToSlide: true,
-
+        waitForAnimate: false,
 
         responsive: [
             {
@@ -35,20 +30,17 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: false,
+                    centerMode: true,
+                    centerPadding: '20px',
                     variableWidth: false,
-                    speed: 600
+                    speed: 600,
+                    arrows: true
                 }
             }
         ]
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        // Принудительно завершаем предыдущие анимации
         $('.slick-slide', this).css('transition', 'none');
-
-        // Запускаем рефлоу для сброса анимаций
         void this.offsetWidth;
-
-        // Устанавливаем новые transition
         $('.slick-slide', this).css({
             'transition': 'transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), ' +
                 'opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), ' +

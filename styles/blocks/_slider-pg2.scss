@@ -12,9 +12,10 @@
   }
 
   @include mobile {
-    max-width: rem(400);
+    max-width: 100%;
     padding: rem(20) rem(15) !important;
     margin-bottom: rem(100);
+    overflow: hidden;
   }
 }
 
@@ -27,7 +28,7 @@
   perspective: rem(1000);
 
   @include mobile {
-    max-width: rem(400);
+    max-width: 100%;
     border-radius: rem(20);
     perspective: rem(30);
   }
@@ -36,10 +37,11 @@
     padding: rem(40) 0 !important;
     overflow: visible;
     border-radius: rem(50);
-    transform-style: preserve-3d; // Для лучшего 3D эффекта
+    transform-style: preserve-3d;
 
     @include mobile {
       padding: rem(20) 0 !important;
+      overflow: hidden;
     }
   }
 
@@ -71,8 +73,6 @@
       width: rem(360) !important;
     }
 
-
-
     // Центральный слайд
     &.slick-center {
       width: rem(550) !important;
@@ -84,10 +84,6 @@
 
       @include laptop{
         width: rem(450) !important;
-      }
-
-      @include mobile{
-        width: rem(150);
       }
     }
 
@@ -108,14 +104,12 @@
 
     @include mobile {
       width: 100% !important;
-      margin: 0;
-      transform: scale(1) !important;
-      filter: none !important;
-      opacity: 1 !important;
-
+      margin: 0 rem(10);
+      padding: 0 rem(10);
+      box-sizing: border-box;
 
       &.slick-center {
-        width: 100% !important;
+        transform: scale(1) !important;
       }
     }
   }
@@ -124,6 +118,10 @@
     border-radius: rem(30);
     overflow: hidden;
     transition: inherit;
+
+    @include mobile {
+      border-radius: rem(15);
+    }
 
     img {
       width: 100%;
@@ -175,7 +173,7 @@
     left: rem(30);
 
     @include mobile {
-      left: rem(10);
+      left: rem(5);
     }
   }
 
@@ -183,7 +181,7 @@
     right: rem(30);
 
     @include mobile {
-      right: rem(10);
+      right: rem(5);
     }
   }
 
