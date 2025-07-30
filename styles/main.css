@@ -282,7 +282,7 @@ svg * {
 }
 @media (width <= 47.9375rem) {
   .container {
-    max-width: calc(var(--container-width-mobile) + var(--container-padding-x-mobile) * 2);
+    max-width: 25rem;
     margin-inline: auto;
     padding-inline: var(--container-padding-x-mobile);
   }
@@ -1286,8 +1286,14 @@ body.accessibility-mode img {
   padding: 5rem 1.875rem;
   margin-bottom: 12.5rem;
 }
+@media (width <= 96.875rem) {
+  .wrapper-pg2 {
+    max-width: 84.375rem;
+  }
+}
 @media (width <= 47.9375rem) {
   .wrapper-pg2 {
+    max-width: 25rem;
     padding: 1.25rem 0.9375rem !important;
     margin-bottom: 6.25rem;
   }
@@ -1299,11 +1305,13 @@ body.accessibility-mode img {
   border-radius: 3.125rem;
   margin: 0 auto;
   max-width: 112.5rem;
-  perspective: 1000px;
+  perspective: 62.5rem;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 {
+    max-width: 25rem;
     border-radius: 1.25rem;
+    perspective: 1.875rem;
   }
 }
 .slider-pg2 .slick-list {
@@ -1335,6 +1343,11 @@ body.accessibility-mode img {
   filter: brightness(0.95) blur(0.5px);
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
+@media (width <= 96.875rem) {
+  .slider-pg2 .slick-slide {
+    width: 22.5rem !important;
+  }
+}
 .slider-pg2 .slick-slide.slick-center {
   width: 34.375rem !important;
   transform: scale(1) translateZ(10px);
@@ -1342,6 +1355,16 @@ body.accessibility-mode img {
   opacity: 1;
   filter: brightness(1) blur(0);
   box-shadow: 0 0.9375rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+@media (width <= 96.875rem) {
+  .slider-pg2 .slick-slide.slick-center {
+    width: 28.125rem !important;
+  }
+}
+@media (width <= 47.9375rem) {
+  .slider-pg2 .slick-slide.slick-center {
+    width: 9.375rem;
+  }
 }
 .slider-pg2 .slick-slide.slick-active {
   opacity: 0.95;

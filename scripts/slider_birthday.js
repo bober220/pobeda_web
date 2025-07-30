@@ -22,10 +22,6 @@ $(document).ready(function(){
         mobileFirst: true,
         swipeToSlide: true,
 
-        // Автопрокрутка
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
 
         responsive: [
             {

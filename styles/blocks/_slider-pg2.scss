@@ -7,7 +7,12 @@
   padding: rem(80) rem(30);
   margin-bottom: rem(200);
 
+  @include laptop{
+    max-width: rem(1350);
+  }
+
   @include mobile {
+    max-width: rem(400);
     padding: rem(20) rem(15) !important;
     margin-bottom: rem(100);
   }
@@ -19,10 +24,12 @@
   border-radius: rem(50);
   margin: 0 auto;
   max-width: rem(1800);
-  perspective: 1000px;
+  perspective: rem(1000);
 
   @include mobile {
+    max-width: rem(400);
     border-radius: rem(20);
+    perspective: rem(30);
   }
 
   .slick-list {
@@ -60,6 +67,12 @@
     filter: brightness(0.95) blur(0.5px);
     box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.1);
 
+    @include laptop{
+      width: rem(360) !important;
+    }
+
+
+
     // Центральный слайд
     &.slick-center {
       width: rem(550) !important;
@@ -68,6 +81,14 @@
       opacity: 1;
       filter: brightness(1) blur(0);
       box-shadow: 0 rem(15) rem(40) rgba(0, 0, 0, 0.2);
+
+      @include laptop{
+        width: rem(450) !important;
+      }
+
+      @include mobile{
+        width: rem(150);
+      }
     }
 
     // Соседние с центральным слайды
