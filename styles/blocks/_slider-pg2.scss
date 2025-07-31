@@ -99,13 +99,22 @@
         }
       }
     }
+    .tik-tok{
+      background: #7330be;
+    }
+    .cowboy{
+      background: #1c3872;
+    }
+    .pirats{
+      background: #818f1f;
+    }
 
     .slide-text {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: #151A32;
+
       border-radius: 0 rem(30) rem(30) 0;
       height: rem(325); /* Половина высоты фото */
       padding: 0 rem(40);
@@ -147,46 +156,57 @@
     }
   }
 
+
+
   .slick-arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    width: rem(50);
-    height: rem(50);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    transform: translateY(-50%) scale(1);
+    z-index: 10;
+    width: rem(60);
+    height: rem(60);
+    background: rgba(0, 0, 0, 0.7); // Темный фон для лучшего контраста
+    color: #0ff; // Неоновый голубой цвет
     border-radius: 50%;
     border: none;
-    font-size: rem(20);
+    font-size: rem(24);
+    line-height: rem(60);
     cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 rem(10) #0ff,
+    0 0 rem(20) #0ff,
+    inset 0 0 rem(10) #0ff; // Неоновое свечение
+    transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    opacity: 0.9;
+    text-shadow: 0 0 rem(5) #0ff; // Свечение текста
 
     &:hover {
+      transform: translateY(-50%) scale(1.1);
+      opacity: 1;
       background: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 rem(15) #0ff,
+      0 0 rem(30) #0ff,
+      inset 0 0 rem(15) #0ff;
     }
 
     @include mobile {
       width: rem(40);
       height: rem(40);
-      font-size: rem(16);
+      font-size: rem(18);
+      line-height: rem(40);
+      box-shadow: 0 0 rem(5) #0ff,
+      0 0 rem(10) #0ff,
+      inset 0 0 rem(5) #0ff;
     }
   }
 
   .slick-prev {
-    left: rem(25);
-
-    @include mobile {
-      left: rem(-15);
-    }
+    left: rem(30);
+    @include mobile { left: rem(5); }
   }
 
   .slick-next {
-    right: rem(25);
-
-    @include mobile {
-      right: rem(-15);
-    }
+    right: rem(30);
+    @include mobile { right: rem(5); }
   }
 
   .slick-dots {

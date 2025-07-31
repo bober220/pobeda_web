@@ -1313,7 +1313,6 @@ body.accessibility-mode img {
   margin: 0 auto;
   max-width: 112.5rem;
   width: 100%;
-  /* Модифицированные стили для кнопок */
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 {
@@ -1341,7 +1340,6 @@ body.accessibility-mode img {
 .slider-pg2 .slider__item-pg2 .slide-content {
   display: flex;
   height: 34.375rem; /* Фиксированная высота как у фото */
-  position: relative; /* Добавляем для позиционирования кнопок */
   border-radius: 1.875rem;
   overflow: hidden;
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
@@ -1382,18 +1380,25 @@ body.accessibility-mode img {
     border-radius: 1.875rem 1.875rem 0 0;
   }
 }
+.slider-pg2 .slider__item-pg2 .tik-tok {
+  background: #7330be;
+}
+.slider-pg2 .slider__item-pg2 .cowboy {
+  background: #1c3872;
+}
+.slider-pg2 .slider__item-pg2 .pirats {
+  background: #818f1f;
+}
 .slider-pg2 .slider__item-pg2 .slide-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #151A32;
   border-radius: 0 1.875rem 1.875rem 0;
   height: 20.3125rem; /* Половина высоты фото */
   padding: 0 2.5rem;
   margin-top: auto; /* Выравнивание по низу */
   margin-bottom: auto; /* Выравнивание по верху */
-  position: relative; /* Для позиционирования кнопок */
 }
 .slider-pg2 .slider__item-pg2 .slide-text h1 {
   font-size: 2.25rem;
@@ -1432,53 +1437,52 @@ body.accessibility-mode img {
 }
 .slider-pg2 .slick-arrow {
   position: absolute;
-  bottom: 1.25rem;
-  transform: translateY(0) scale(1);
+  top: 50%;
+  transform: translateY(-50%) scale(1);
   z-index: 10;
-  width: 2.5rem; /* Уменьшенный размер */
-  height: 2.5rem; /* Уменьшенный размер */
+  width: 3.75rem;
+  height: 3.75rem;
   background: rgba(0, 0, 0, 0.7);
   color: #0ff;
   border-radius: 50%;
   border: none;
-  font-size: 1.125rem; /* Уменьшенный размер */
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 3.75rem;
   cursor: pointer;
-  box-shadow: 0 0 0.3125rem #0ff, 0 0 0.625rem #0ff, inset 0 0 0.3125rem #0ff;
+  box-shadow: 0 0 0.625rem #0ff, 0 0 1.25rem #0ff, inset 0 0 0.625rem #0ff;
   transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   opacity: 0.9;
-  text-shadow: 0 0 0.1875rem #0ff;
+  text-shadow: 0 0 0.3125rem #0ff;
 }
 .slider-pg2 .slick-arrow:hover {
-  transform: translateY(0) scale(1.1);
+  transform: translateY(-50%) scale(1.1);
   opacity: 1;
   background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 0 0.625rem #0ff, 0 0 1.25rem #0ff, inset 0 0 0.625rem #0ff;
+  box-shadow: 0 0 0.9375rem #0ff, 0 0 1.875rem #0ff, inset 0 0 0.9375rem #0ff;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-arrow {
-    width: 1.875rem;
-    height: 1.875rem;
-    font-size: 0.875rem;
-    line-height: 1.875rem;
-    box-shadow: 0 0 0.1875rem #0ff, 0 0 0.3125rem #0ff, inset 0 0 0.1875rem #0ff;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+    box-shadow: 0 0 0.3125rem #0ff, 0 0 0.625rem #0ff, inset 0 0 0.3125rem #0ff;
   }
 }
 .slider-pg2 .slick-prev {
-  left: auto;
-  right: 4.375rem; /* Позиционируем слева от next */
+  left: 1.875rem;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-prev {
-    right: 3.125rem;
+    left: 0.3125rem;
   }
 }
 .slider-pg2 .slick-next {
-  right: 1.25rem;
+  right: 1.875rem;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-next {
-    right: 0.9375rem;
+    right: 0.3125rem;
   }
 }
 .slider-pg2 .slick-dots {
