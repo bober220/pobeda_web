@@ -253,7 +253,7 @@ svg * {
   --font-family-base: "ABeeZee", "sans-serif";
   --font-family-info: "Comfortaa", "sans-serif";
   --font-family-accant: "AbhayaLibre", "sans-serif";
-  --container-width-main: 105rem;
+  --container-width-main: 112.5rem;
   --container-padding-x-main: 3.125rem;
   --container-width-laptop: 105rem;
   --container-padding-x-laptop: 3.125rem;
@@ -282,7 +282,7 @@ svg * {
 }
 @media (width <= 47.9375rem) {
   .container {
-    max-width: 25rem;
+    max-width: 23.75rem;
     margin-inline: auto;
     padding-inline: var(--container-padding-x-mobile);
   }
@@ -1043,7 +1043,7 @@ body.accessibility-mode img {
   display: inline;
 }
 .events h1 {
-  margin: 1.875rem 0;
+  margin: 2.5rem 0;
   padding: 0;
 }
 @media (width <= 96.875rem) {
@@ -1054,7 +1054,7 @@ body.accessibility-mode img {
 }
 @media (width <= 47.9375rem) {
   .events h1 {
-    font-size: 1.875rem;
+    font-size: 1.5625rem;
   }
 }
 .events p {
@@ -1145,7 +1145,7 @@ body.accessibility-mode img {
 }
 .events .info-block .photo-block .photo3 {
   top: 10%;
-  right: 15%;
+  right: 18%;
   transform: translate(50%, -50%) rotate(-6deg);
   z-index: 1;
   background-color: #C15151;
@@ -1153,7 +1153,7 @@ body.accessibility-mode img {
 }
 .events .info-block .photo-block .photo4 {
   bottom: 10%;
-  left: 18%;
+  left: 20%;
   transform: translate(-50%, 50%) rotate(-12deg);
   z-index: 1;
   background-color: #197900;

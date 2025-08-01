@@ -10,7 +10,7 @@
   }
 
   h1{
-    margin: rem(30) 0;
+    margin: rem(40) 0;
     padding: 0;
 
     @include laptop {
@@ -19,7 +19,7 @@
     }
 
     @include mobile{
-      font-size: rem(30);
+      font-size: rem(25);
     }
   }
 
@@ -111,7 +111,7 @@
       /* Сверху справа — "Экскурсии" */
       .photo3 {
         top: 10%;
-        right: 15%;
+        right: 18%;
         transform: translate(50%, -50%) rotate(-6deg);
         z-index: 1;
         background-color: #C15151;
@@ -121,7 +121,7 @@
       /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
       .photo4 {
         bottom: 10%;
-        left: 18%;
+        left: 20%;
         transform: translate(-50%, 50%) rotate(-12deg);
         z-index: 1;
         background-color: #197900;
