@@ -346,7 +346,7 @@ h2, .h2 {
 }
 
 h1, .h1 {
-  font-size: clamp(1.5rem, 0.694214876rem + 3.305785124vw, 4rem);
+  font-size: clamp(0.625rem, -0.4628099174rem + 4.4628099174vw, 4rem);
 }
 
 h2, .h2 {
@@ -1049,12 +1049,12 @@ body.accessibility-mode img {
 @media (width <= 96.875rem) {
   .events .h1 {
     font-size: 2.8125rem;
-    margin-top: -3.75rem;
   }
 }
 @media (width <= 47.9375rem) {
   .events .h1 {
     font-size: 1.5625rem;
+    margin-top: -3.75rem;
   }
 }
 .events p {
@@ -1300,10 +1300,10 @@ body.accessibility-mode img {
 }
 @media (width <= 47.9375rem) {
   .wrapper-pg2 {
+    margin-top: -3.125rem;
     max-width: 25rem;
     height: 31.25rem;
     padding: 1.25rem 0.9375rem !important;
-    margin-bottom: 6.25rem;
   }
 }
 
@@ -1438,13 +1438,12 @@ body.accessibility-mode img {
 }
 @media (width <= 96.875rem) {
   .slider-pg2 .slider__item-pg2 .slide-text h1 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slider__item-pg2 .slide-text h1 {
     color: white;
-    font-size: 1.5rem;
   }
 }
 .slider-pg2 .slider__item-pg2 .slide-text p {

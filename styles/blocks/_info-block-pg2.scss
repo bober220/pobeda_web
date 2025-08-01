@@ -15,11 +15,11 @@
 
     @include laptop {
       font-size: rem(45);
-      margin-top: rem(-60);
     }
 
     @include mobile{
       font-size: rem(25);
+      margin-top: rem(-60);
     }
   }
 
