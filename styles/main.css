@@ -1291,6 +1291,7 @@ body.accessibility-mode img {
   margin: 0 auto;
   padding: 5rem 1.875rem;
   margin-bottom: 12.5rem;
+  border-radius: 3.125rem;
 }
 @media (width <= 96.875rem) {
   .wrapper-pg2 {
@@ -1367,14 +1368,14 @@ body.accessibility-mode img {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border-radius: 1.875rem;
+  border-radius: 3.125rem;
 }
 .slider-pg2 .slider__item-pg2 .slide-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 1.875rem 0 0 1.875rem;
+  border-radius: 3.125rem;
 }
 @media (width <= 62.5rem) {
   .slider-pg2 .slider__item-pg2 .slide-image {
@@ -1447,6 +1448,8 @@ body.accessibility-mode img {
   }
 }
 .slider-pg2 .slider__item-pg2 .slide-text p {
+  text-align: center;
+  width: 100%;
   font-size: 1.5rem;
   line-height: 1.6;
   color: white;
@@ -1543,6 +1546,7 @@ body.accessibility-mode img {
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-arrow {
+    top: 44%;
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.125rem;
@@ -1551,7 +1555,7 @@ body.accessibility-mode img {
   }
 }
 .slider-pg2 .slick-prev {
-  left: 1.875rem;
+  left: 1.5625rem;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-prev {
@@ -1559,7 +1563,7 @@ body.accessibility-mode img {
   }
 }
 .slider-pg2 .slick-next {
-  right: 1.875rem;
+  right: 1.5625rem;
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-next {
