@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   max-width: rem(1800);
-
   width: 100%;
   margin: 0 auto;
   padding: rem(80) rem(30);
@@ -17,6 +16,7 @@
 
   @include mobile {
     max-width: rem(400);
+    height: rem(500);
     padding: rem(20) rem(15) !important;
     margin-bottom: rem(100);
   }
@@ -28,7 +28,6 @@
   border-radius: rem(30);
   margin: 0 auto;
   max-width: rem(1800);
-
   width: 100%;
 
   @include mobile {
@@ -56,8 +55,7 @@
 
     .slide-content {
       display: flex;
-      height: rem(550); /* Фиксированная высота как у фото */
-
+      height: rem(550);
       border-radius: rem(30);
       overflow: hidden;
       box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.1);
@@ -66,11 +64,16 @@
         flex-direction: column;
         height: auto;
       }
+
+      @include mobile {
+        box-shadow: none;
+        border-radius: 0;
+      }
     }
 
     .slide-image {
-      flex: 0 0 rem(550); /* Фиксированная ширина 450px */
-      height: rem(550); /* Фиксированная высота 450px */
+      width: rem(550);
+      height: rem(550);
       margin: rem(-10);
       padding: 0;
       display: flex;
@@ -98,15 +101,39 @@
           border-radius: rem(30) rem(30) 0 0;
         }
       }
+
+      @include mobile {
+        border-radius: 0;
+        margin: 0;
+
+        img {
+          border-radius: rem(30);
+        }
+      }
     }
-    .tik-tok{
+
+    .tik-tok {
       background: #7330be;
+
+      @include mobile {
+        background: none;
+      }
     }
-    .cowboy{
+
+    .cowboy {
       background: #1c3872;
+
+      @include mobile {
+        background: none;
+      }
     }
-    .pirats{
+
+    .pirats {
       background: #818f1f;
+
+      @include mobile {
+        background: none;
+      }
     }
 
     .slide-text {
@@ -114,12 +141,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       border-radius: 0 rem(30) rem(30) 0;
-      height: rem(325); /* Половина высоты фото */
+      height: rem(325);
       padding: 0 rem(40);
-      margin-top: auto; /* Выравнивание по низу */
-      margin-bottom: auto; /* Выравнивание по верху */
+      margin-top: auto;
+      margin-bottom: auto;
 
       h1 {
         font-size: rem(36);
@@ -131,17 +157,25 @@
         }
 
         @include mobile {
+          color: white;
           font-size: rem(24);
         }
       }
 
       p {
-        font-size: rem(18);
+        font-size: rem(24);
         line-height: 1.6;
         color: white;
+        display: block; // Убедимся, что параграф виден
 
         @include laptop {
           font-size: rem(16);
+        }
+
+        @include mobile {
+          color: white;
+          font-size: rem(14);
+          margin-top: rem(10);
         }
       }
 
@@ -153,10 +187,55 @@
         border-radius: 0 0 rem(30) rem(30);
         margin: 0;
       }
+
+      @include mobile {
+        padding: rem(15);
+        height: auto;
+        border-radius: 0;
+        margin: 0;
+        background: none !important;
+
+        &:first-child {
+          order: 1;
+          padding-bottom: rem(5);
+
+          h1 {
+            margin-bottom: rem(5);
+          }
+
+          p {
+            display: none;
+          }
+        }
+
+        &:last-child {
+          order: 3;
+          padding-top: rem(5);
+
+          h1 {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include mobile {
+      padding: 0;
+
+      .slide-content {
+        flex-direction: column;
+        border-radius: 0;
+      }
+
+      .slide-image {
+        order: 2;
+        width: 100%;
+        height: rem(250);
+        margin: 0;
+        border-radius: 0;
+      }
     }
   }
-
-
 
   .slick-arrow {
     position: absolute;
@@ -165,8 +244,8 @@
     z-index: 10;
     width: rem(60);
     height: rem(60);
-    background: rgba(0, 0, 0, 0.7); // Темный фон для лучшего контраста
-    color: #0ff; // Неоновый голубой цвет
+    background: rgba(0, 0, 0, 0.7);
+    color: #0ff;
     border-radius: 50%;
     border: none;
     font-size: rem(24);
@@ -174,10 +253,10 @@
     cursor: pointer;
     box-shadow: 0 0 rem(10) #0ff,
     0 0 rem(20) #0ff,
-    inset 0 0 rem(10) #0ff; // Неоновое свечение
+    inset 0 0 rem(10) #0ff;
     transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
     opacity: 0.9;
-    text-shadow: 0 0 rem(5) #0ff; // Свечение текста
+    text-shadow: 0 0 rem(5) #0ff;
 
     &:hover {
       transform: translateY(-50%) scale(1.1);
