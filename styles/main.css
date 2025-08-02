@@ -1043,7 +1043,7 @@ body.accessibility-mode img {
   display: inline;
 }
 .events .h1 {
-  margin: 2.5rem 0;
+  margin: 0.9375rem 0;
   padding: 0;
 }
 @media (width <= 96.875rem) {
@@ -1054,7 +1054,7 @@ body.accessibility-mode img {
 @media (width <= 47.9375rem) {
   .events .h1 {
     font-size: 1.5625rem;
-    margin-top: -3.75rem;
+    margin-top: -3.125rem;
   }
 }
 .events p {
@@ -1070,22 +1070,36 @@ body.accessibility-mode img {
 .events .info-block {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-top: 8.125rem;
-  margin-bottom: 11.875rem;
+  height: 45.625rem;
+  width: 112.5rem;
+  padding-top: 6.25rem;
+  padding-right: 3.125rem;
+  padding-left: 3.125rem;
+  margin-top: 1.875rem;
+  margin-bottom: 3.125rem;
+  border-radius: 3.125rem;
+  background: #151A32;
 }
 @media (width <= 96.875rem) {
   .events .info-block {
-    margin-top: 9.375rem;
+    width: 84.375rem;
+    height: 43.75rem;
+    margin-top: 3.125rem;
   }
 }
 @media (width <= 47.9375rem) {
   .events .info-block {
     display: flex;
     flex-direction: column;
+    width: 21.875rem;
+    height: 31.25rem;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 6.25rem;
+    padding-top: 1.875rem;
+    margin-bottom: 15.625rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 }
 .events .info-block .photo-block {
@@ -1098,29 +1112,31 @@ body.accessibility-mode img {
   /* Центральная — "Развлечения" */
   /* Сверху слева — "Выставки" */
   /* Сверху справа — "Экскурсии" */
-  /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
+  /* Снизу слева — "Внезапное поздравление" */
   /* Снизу справа — "Новый год" */
 }
 @media (width <= 96.875rem) {
   .events .info-block .photo-block {
+    margin-top: 6.25rem;
     height: 18.75rem;
   }
 }
 @media (width <= 47.9375rem) {
   .events .info-block .photo-block {
-    display: none;
+    width: 9.375rem;
+    height: 15.625rem;
   }
 }
 .events .info-block .photo-block [class^=photo] {
   position: absolute;
-  padding: 10px;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .events .info-block .photo-block [class^=photo] img {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   border-radius: 0.625rem;
 }
 .events .info-block .photo-block [class^=photo] p {
@@ -1129,11 +1145,29 @@ body.accessibility-mode img {
   margin: 0;
   font-size: 1.25rem;
 }
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block [class^=photo] {
+    padding: 0.3125rem;
+    width: 7.5rem;
+  }
+  .events .info-block .photo-block [class^=photo] img {
+    width: 6.25rem;
+    height: auto;
+  }
+  .events .info-block .photo-block [class^=photo] p {
+    font-size: 0.75rem;
+  }
+}
 .events .info-block .photo-block .photo1 {
   transform: rotate(-6deg);
-  z-index: 2; /* Теперь ниже боковых */
+  z-index: 2;
   background-color: #8B39E9;
   border-radius: 0.625rem;
+}
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block .photo1 {
+    transform: rotate(-6deg) scale(0.5);
+  }
 }
 .events .info-block .photo-block .photo2 {
   top: 10%;
@@ -1143,6 +1177,13 @@ body.accessibility-mode img {
   background-color: #14587e;
   border-radius: 0.625rem;
 }
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block .photo2 {
+    top: 5%;
+    left: 15%;
+    transform: translate(-50%, -50%) rotate(3deg) scale(0.5);
+  }
+}
 .events .info-block .photo-block .photo3 {
   top: 10%;
   right: 18%;
@@ -1150,6 +1191,13 @@ body.accessibility-mode img {
   z-index: 1;
   background-color: #C15151;
   border-radius: 0.625rem;
+}
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block .photo3 {
+    top: 5%;
+    right: 18%;
+    transform: translate(50%, -50%) rotate(-6deg) scale(0.5);
+  }
 }
 .events .info-block .photo-block .photo4 {
   bottom: 10%;
@@ -1159,6 +1207,13 @@ body.accessibility-mode img {
   background-color: #197900;
   border-radius: 0.625rem;
 }
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block .photo4 {
+    bottom: 5%;
+    left: 20%;
+    transform: translate(-50%, 50%) rotate(-12deg) scale(0.5);
+  }
+}
 .events .info-block .photo-block .photo5 {
   bottom: 10%;
   right: 15%;
@@ -1166,6 +1221,13 @@ body.accessibility-mode img {
   z-index: 3;
   background-color: #005AA4;
   border-radius: 0.625rem;
+}
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block .photo5 {
+    bottom: 5%;
+    right: 15%;
+    transform: translate(50%, 50%) rotate(6deg) scale(0.5);
+  }
 }
 @media (width <= 96.875rem) {
   .events .info-block .photo-block {
@@ -1207,6 +1269,55 @@ body.accessibility-mode img {
     transform: translate(50%, 50%) rotate(6deg) scale(0.7);
   }
 }
+@media (width <= 47.9375rem) {
+  .events .info-block .photo-block {
+    width: 100% !important;
+    height: 9.375rem !important;
+    margin-top: 3.125rem !important;
+  }
+  .events .info-block .photo-block [class^=photo] {
+    padding: 0.3125rem !important;
+    width: 20rem !important;
+    height: auto !important;
+  }
+  .events .info-block .photo-block [class^=photo] img {
+    width: 12.5rem !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  .events .info-block .photo-block [class^=photo] p {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+  }
+  .events .info-block .photo-block .photo1 {
+    transform: rotate(-6deg) scale(0.5) !important;
+    width: 11.25rem !important;
+  }
+  .events .info-block .photo-block .photo2 {
+    top: 13% !important;
+    left: 25% !important;
+    transform: translate(-50%, -50%) rotate(3deg) scale(0.5) !important;
+    width: 11.25rem !important;
+  }
+  .events .info-block .photo-block .photo3 {
+    top: 13% !important;
+    right: 25% !important;
+    transform: translate(50%, -50%) rotate(-6deg) scale(0.5) !important;
+    width: 11.25rem !important;
+  }
+  .events .info-block .photo-block .photo4 {
+    bottom: 5% !important;
+    left: 25% !important;
+    transform: translate(-50%, 50%) rotate(-12deg) scale(0.5) !important;
+    width: 11.25rem !important;
+  }
+  .events .info-block .photo-block .photo5 {
+    bottom: 5% !important;
+    right: 25% !important;
+    transform: translate(50%, 50%) rotate(6deg) scale(0.5) !important;
+    width: 11.25rem !important;
+  }
+}
 .events .birthday {
   display: flex;
   flex-direction: column;
@@ -1223,23 +1334,6 @@ body.accessibility-mode img {
 @media (width <= 47.9375rem) {
   .events .birthday {
     padding-top: 1.25rem;
-  }
-}
-.events .birthday .slider {
-  position: relative;
-  touch-action: pan-y;
-  user-select: none;
-  -webkit-user-drag: none;
-  overflow: hidden;
-  border-radius: 3.125rem;
-  margin: 0 auto;
-  transition: border-radius 0.3s ease;
-  background: linear-gradient(145deg, #ff00ff, #00ffff);
-  box-shadow: 0 0 1.25rem rgba(0, 255, 255, 0.7), 0 0 2.5rem rgba(255, 0, 255, 0.5);
-}
-@media (width <= 47.9375rem) {
-  .events .birthday .slider {
-    box-shadow: 0 0 0.625rem rgba(0, 255, 255, 0.7), 0 0 1.25rem rgba(255, 0, 255, 0.5);
   }
 }
 
@@ -1344,7 +1438,6 @@ body.accessibility-mode img {
   height: 34.375rem;
   border-radius: 1.875rem;
   overflow: hidden;
-  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 @media (width <= 62.5rem) {
   .slider-pg2 .slider__item-pg2 .slide-content {

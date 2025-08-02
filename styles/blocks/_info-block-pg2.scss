@@ -10,7 +10,7 @@
   }
 
   .h1{
-    margin: rem(40) 0;
+    margin: rem(15) 0;
     padding: 0;
 
     @include laptop {
@@ -19,7 +19,7 @@
 
     @include mobile{
       font-size: rem(25);
-      margin-top: rem(-60);
+      margin-top: rem(-50);
     }
   }
 
@@ -36,20 +36,34 @@
   .info-block{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-top: rem(130);
-    margin-bottom: rem(190);
+    height: rem(730);
+    width: rem(1800);
+    padding-top: rem(100);
+    padding-right: rem(50);
+    padding-left: rem(50);
+    margin-top: rem(30);
+    margin-bottom: rem(50);
+    border-radius: rem(50);
+    background: #151A32;
 
     @include laptop{
-      margin-top: rem(150);
+      width: rem(1350);
+      height: rem(700);
+      margin-top: rem(50);
     }
 
     @include mobile {
       display: flex;
       flex-direction: column;
+      width: rem(350);
+      height: rem(500);
       align-items: center;
       justify-content: center;
       text-align: center;
-      margin-top: rem(100);
+      padding-top: rem(30);
+      margin-bottom: rem(250);
+      padding-right: rem(20);
+      padding-left: rem(20);
     }
 
     .photo-block {
@@ -60,25 +74,26 @@
       justify-content: center;
       align-items: center;
 
-
       @include laptop{
+        margin-top: rem(100);
         height: rem(300);
       }
 
       @include mobile{
-        display: none;
+        width: rem(150);
+        height: rem(250);
       }
 
       [class^="photo"] {
         position: absolute;
-        padding: 10px;
+        padding: rem(10);
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень для лучшего перекрытия */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
         img {
-          margin-bottom: 5px;
+          margin-bottom: rem(5);
           border-radius: rem(10);
         }
 
@@ -88,14 +103,32 @@
           margin: 0;
           font-size: rem(20);
         }
+
+        @include mobile {
+          padding: rem(5);
+          width: rem(120);
+
+          img {
+            width: rem(100);
+            height: auto;
+          }
+
+          p {
+            font-size: rem(12);
+          }
+        }
       }
 
       /* Центральная — "Развлечения" */
       .photo1 {
         transform: rotate(-6deg);
-        z-index: 2; /* Теперь ниже боковых */
+        z-index: 2;
         background-color: #8B39E9;
         border-radius: rem(10);
+
+        @include mobile {
+          transform: rotate(-6deg) scale(0.5);
+        }
       }
 
       /* Сверху слева — "Выставки" */
@@ -106,6 +139,12 @@
         z-index: 3;
         background-color: #14587e;
         border-radius: rem(10);
+
+        @include mobile {
+          top: 5%;
+          left: 15%;
+          transform: translate(-50%, -50%) rotate(3deg) scale(0.5);
+        }
       }
 
       /* Сверху справа — "Экскурсии" */
@@ -116,9 +155,15 @@
         z-index: 1;
         background-color: #C15151;
         border-radius: rem(10);
+
+        @include mobile {
+          top: 5%;
+          right: 18%;
+          transform: translate(50%, -50%) rotate(-6deg) scale(0.5);
+        }
       }
 
-      /* Снизу слева — "Внезапное поздравление" (было "Выездные поздравления") */
+      /* Снизу слева — "Внезапное поздравление" */
       .photo4 {
         bottom: 10%;
         left: 20%;
@@ -126,6 +171,12 @@
         z-index: 1;
         background-color: #197900;
         border-radius: rem(10);
+
+        @include mobile {
+          bottom: 5%;
+          left: 20%;
+          transform: translate(-50%, 50%) rotate(-12deg) scale(0.5);
+        }
       }
 
       /* Снизу справа — "Новый год" */
@@ -136,6 +187,12 @@
         z-index: 3;
         background-color: #005AA4;
         border-radius: rem(10);
+
+        @include mobile {
+          bottom: 5%;
+          right: 15%;
+          transform: translate(50%, 50%) rotate(6deg) scale(0.5);
+        }
       }
 
       @include laptop{
@@ -188,10 +245,63 @@
           transform: translate(50%, 50%) rotate(6deg) scale(0.7);
         }
       }
+      @include mobile {
+        width: 100% !important;
+        height: rem(150) !important;
+        margin-top: rem(50) !important;
+
+        [class^="photo"] {
+          padding: rem(5) !important;
+          width: rem(320) !important;
+          height: auto !important;
+
+          img {
+            width: rem(200) !important;
+            height: auto !important;
+            max-width: 100% !important;
+          }
+
+          p {
+            font-size: rem(12) !important;
+            line-height: 1.2 !important;
+          }
+        }
+
+        .photo1 {
+          transform: rotate(-6deg) scale(0.5) !important;
+          width: rem(180) !important;
+        }
+
+        .photo2 {
+          top: 13% !important;
+          left: 25% !important;
+          transform: translate(-50%, -50%) rotate(3deg) scale(0.5) !important;
+          width: rem(180) !important;
+        }
+
+        .photo3 {
+          top: 13% !important;
+          right: 25% !important;
+          transform: translate(50%, -50%) rotate(-6deg) scale(0.5) !important;
+          width: rem(180) !important;
+        }
+
+        .photo4 {
+          bottom: 5% !important;
+          left: 25% !important;
+          transform: translate(-50%, 50%) rotate(-12deg) scale(0.5) !important;
+          width: rem(180) !important;
+        }
+
+        .photo5 {
+          bottom: 5% !important;
+          right: 25% !important;
+          transform: translate(50%, 50%) rotate(6deg) scale(0.5) !important;
+          width: rem(180) !important;
+        }
+      }
+
     }
-
-
-
   }
 
   .birthday{
@@ -209,28 +319,5 @@
     @include mobile{
       padding-top: rem(20);
     }
-
-    .slider {
-      position: relative;
-      touch-action: pan-y;
-      user-select: none;
-      -webkit-user-drag: none;
-      overflow: hidden;
-      border-radius: 3.125rem;
-      margin: 0 auto;
-      transition: border-radius 0.3s ease;
-      background: linear-gradient(145deg, #ff00ff, #00ffff);
-      box-shadow: 0 0 1.25rem rgba(0, 255, 255, 0.7), 0 0 2.5rem rgba(255, 0, 255, 0.5);
-    }
-
-    @include mobile{
-      .slider {
-        box-shadow: 0 0 0.625rem rgba(0, 255, 255, 0.7), 0 0 1.25rem rgba(255, 0, 255, 0.5);
-      }
-    }
-
   }
 }
-
-
-
