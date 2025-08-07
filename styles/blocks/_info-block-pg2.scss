@@ -28,6 +28,9 @@
     font-family: var(--font-family-info);
     font-size: rem(20);
 
+  }
+
+  .prew{
     @include mobile{
       display: none;
     }
@@ -114,7 +117,7 @@
           }
 
           p {
-            font-size: rem(12);
+            font-size: rem(25);
           }
         }
       }
@@ -262,7 +265,7 @@
           }
 
           p {
-            font-size: rem(12) !important;
+            font-size: rem(16) !important;
             line-height: 1.2 !important;
           }
         }

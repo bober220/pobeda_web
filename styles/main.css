@@ -1063,7 +1063,7 @@ body.accessibility-mode img {
   font-size: 1.25rem;
 }
 @media (width <= 47.9375rem) {
-  .events p {
+  .events .prew {
     display: none;
   }
 }
@@ -1155,7 +1155,7 @@ body.accessibility-mode img {
     height: auto;
   }
   .events .info-block .photo-block [class^=photo] p {
-    font-size: 0.75rem;
+    font-size: 1.5625rem;
   }
 }
 .events .info-block .photo-block .photo1 {
@@ -1286,7 +1286,7 @@ body.accessibility-mode img {
     max-width: 100% !important;
   }
   .events .info-block .photo-block [class^=photo] p {
-    font-size: 0.75rem !important;
+    font-size: 1rem !important;
     line-height: 1.2 !important;
   }
   .events .info-block .photo-block .photo1 {
