@@ -1655,7 +1655,7 @@ body.accessibility-mode img {
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-next {
-    right: 0.3125rem;
+    right: 0.625rem;
   }
 }
 .slider-pg2 .slick-dots {

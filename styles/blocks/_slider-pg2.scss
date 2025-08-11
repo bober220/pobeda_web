@@ -279,7 +279,7 @@
 
   .slick-next {
     right: rem(5);
-    @include mobile { right: rem(5); }
+    @include mobile { right: rem(10); }
   }
 
   .slick-dots {
