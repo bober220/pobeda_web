@@ -73,12 +73,12 @@
     }
 
     .slide-image {
+      display: flex;
+      z-index: 1;
       width: rem(550);
       height: rem(550);
       margin: rem(-10);
       padding: 0;
-      display: flex;
-      z-index: 1;
       align-items: center;
       justify-content: center;
       background: transparent;
@@ -154,7 +154,7 @@
         color: white;
 
         @include laptop {
-          font-size: rem(20);
+          font-size: rem(26);
         }
 
         @include mobile {
@@ -163,15 +163,17 @@
       }
 
       p {
+        display: block;
         text-align: center;
         width: 100%;
+        margin-bottom: 0;
         font-size: rem(24);
         line-height: 1.6;
         color: white;
-        display: block; // Убедимся, что параграф виден
+
 
         @include laptop {
-          font-size: rem(16);
+          font-size: rem(20);
         }
 
         @include mobile {
@@ -246,27 +248,19 @@
     z-index: 10;
     width: rem(60);
     height: rem(60);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(25, 25, 73);
     color: #0ff;
     border-radius: 50%;
     border: none;
     font-size: rem(24);
     line-height: rem(60);
     cursor: pointer;
-    box-shadow: 0 0 rem(10) #0ff,
-    0 0 rem(20) #0ff,
-    inset 0 0 rem(10) #0ff;
-    transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-    opacity: 0.9;
-    text-shadow: 0 0 rem(5) #0ff;
+
 
     &:hover {
       transform: translateY(-50%) scale(1.1);
       opacity: 1;
-      background: rgba(0, 0, 0, 0.9);
-      box-shadow: 0 0 rem(15) #0ff,
-      0 0 rem(30) #0ff,
-      inset 0 0 rem(15) #0ff;
+      color: var(--color-contact-button);
     }
 
     @include mobile {
@@ -282,12 +276,12 @@
   }
 
   .slick-prev {
-    left: rem(25);
+    left: rem(5);
     @include mobile { left: rem(5); }
   }
 
   .slick-next {
-    right: rem(25);
+    right: rem(5);
     @include mobile { right: rem(5); }
   }
 

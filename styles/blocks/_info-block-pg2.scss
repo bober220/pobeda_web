@@ -265,7 +265,7 @@
           }
 
           p {
-            font-size: rem(16) !important;
+            font-size: rem(22) !important;
             line-height: 1.2 !important;
           }
         }
@@ -277,14 +277,14 @@
 
         .photo2 {
           top: 13% !important;
-          left: 25% !important;
-          transform: translate(-50%, -50%) rotate(3deg) scale(0.5) !important;
+          left: 22% !important;
+          transform: translate(-50%, -50%) rotate(2deg) scale(0.5) !important;
           width: rem(180) !important;
         }
 
         .photo3 {
           top: 13% !important;
-          right: 25% !important;
+          right: 24% !important;
           transform: translate(50%, -50%) rotate(-6deg) scale(0.5) !important;
           width: rem(180) !important;
         }
@@ -292,13 +292,13 @@
         .photo4 {
           bottom: 5% !important;
           left: 25% !important;
-          transform: translate(-50%, 50%) rotate(-12deg) scale(0.5) !important;
+          transform: translate(-50%, 50%) rotate(-8deg) scale(0.5) !important;
           width: rem(180) !important;
         }
 
         .photo5 {
           bottom: 5% !important;
-          right: 25% !important;
+          right: 22% !important;
           transform: translate(50%, 50%) rotate(6deg) scale(0.5) !important;
           width: rem(180) !important;
         }
