@@ -1,0 +1,93 @@
+@use '../helpers' as *;
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: rem(1800);
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: rem(200);
+
+  .h1 {
+    text-align: center;
+    margin-bottom: rem(60);
+  }
+
+  .elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(80);
+    row-gap: rem(50);
+    max-width: rem(1400);
+    width: 100%;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .item {
+      width: 100%;
+      max-width: rem(700);
+      min-height: rem(255); // Изменено на min-height для адаптивности
+      background: #151A32;
+      border: rem(2) solid #8C5DF1;
+      border-radius: rem(90);
+      padding: rem(40);
+
+      @include mobile {
+        max-width: 100%; // Занимает всю доступную ширину
+        min-height: rem(200); // Увеличена минимальная высота
+        border-radius: rem(50);
+        padding: rem(25); // Уменьшен padding для мобильных
+      }
+
+      &-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        gap: rem(30);
+
+        @include mobile {
+          flex-direction: column; // Иконка и текст в колонку на мобильных
+          gap: rem(15);
+          text-align: center; // Центрирование текста
+        }
+      }
+
+      &-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(120);
+        height: rem(120);
+
+        @include mobile {
+          width: rem(80); // Немного увеличил иконку для мобильных
+          height: rem(80);
+        }
+      }
+
+      &-text {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        p {
+          color: white;
+          font-size: rem(26);
+          line-height: 1.5;
+          margin: 0;
+          width: 100%; // Текст занимает всю ширину
+
+          @include mobile {
+            font-size: rem(20); // Немного увеличил размер шрифта
+            text-align: center; // Центрирование текста
+          }
+        }
+      }
+    }
+  }
+}

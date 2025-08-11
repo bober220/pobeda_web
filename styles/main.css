@@ -1384,7 +1384,7 @@ body.accessibility-mode img {
   width: 100%;
   margin: 0 auto;
   padding: 5rem 1.875rem;
-  margin-bottom: 12.5rem;
+  margin-bottom: 6.25rem;
   border-radius: 3.125rem;
 }
 @media (width <= 96.875rem) {
@@ -1687,6 +1687,96 @@ body.accessibility-mode img {
 .slider-pg2 .slick-dots li.slick-active button {
   background: var(--color-primary);
   transform: scale(1.3);
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 112.5rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 12.5rem;
+}
+.program .h1 {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+.program .elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  row-gap: 3.125rem;
+  max-width: 87.5rem;
+  width: 100%;
+}
+@media (width <= 47.9375rem) {
+  .program .elements {
+    grid-template-columns: 1fr;
+  }
+}
+.program .elements .item {
+  width: 100%;
+  max-width: 43.75rem;
+  min-height: 15.9375rem;
+  background: #151A32;
+  border: 0.125rem solid #8C5DF1;
+  border-radius: 5.625rem;
+  padding: 2.5rem;
+}
+@media (width <= 47.9375rem) {
+  .program .elements .item {
+    max-width: 100%;
+    min-height: 12.5rem;
+    border-radius: 3.125rem;
+    padding: 1.5625rem;
+  }
+}
+.program .elements .item-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 1.875rem;
+}
+@media (width <= 47.9375rem) {
+  .program .elements .item-content {
+    flex-direction: column;
+    gap: 0.9375rem;
+    text-align: center;
+  }
+}
+.program .elements .item-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+@media (width <= 47.9375rem) {
+  .program .elements .item-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.program .elements .item-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.program .elements .item-text p {
+  color: white;
+  font-size: 1.625rem;
+  line-height: 1.5;
+  margin: 0;
+  width: 100%;
+}
+@media (width <= 47.9375rem) {
+  .program .elements .item-text p {
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
