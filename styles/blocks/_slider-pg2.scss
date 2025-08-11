@@ -264,14 +264,11 @@
     }
 
     @include mobile {
-      top: 44%;
+      top: 55%;
       width: rem(40);
       height: rem(40);
       font-size: rem(18);
       line-height: rem(40);
-      box-shadow: 0 0 rem(5) #0ff,
-      0 0 rem(10) #0ff,
-      inset 0 0 rem(5) #0ff;
     }
   }
 

@@ -1635,12 +1635,11 @@ body.accessibility-mode img {
 }
 @media (width <= 47.9375rem) {
   .slider-pg2 .slick-arrow {
-    top: 44%;
+    top: 55%;
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.125rem;
     line-height: 2.5rem;
-    box-shadow: 0 0 0.3125rem #0ff, 0 0 0.625rem #0ff, inset 0 0 0.3125rem #0ff;
   }
 }
 .slider-pg2 .slick-prev {
