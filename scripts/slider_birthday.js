@@ -11,45 +11,36 @@ $(document).ready(function() {
             const $slideText = $item.find('.slide-text');
 
             if (isMobile) {
-                // Если мобильная версия и разметка еще не изменена
                 if (!$slideContent.find('.slide-text').first().hasClass('mobile-modified')) {
-                    // Клонируем текст для заголовка
                     const $titleText = $slideText.clone();
                     $titleText.addClass('mobile-modified');
                     $titleText.find('p').remove();
 
-                    // Клонируем текст для описания
                     const $descText = $slideText.clone();
                     $descText.addClass('mobile-modified');
                     $descText.find('h1').remove();
 
-                    // Очищаем контент и добавляем новую структуру
                     $slideContent.empty()
                         .append($titleText)
                         .append($slideImage)
                         .append($descText);
                 }
             } else {
-                // Если десктопная версия и разметка изменена
                 if ($slideContent.find('.slide-text').first().hasClass('mobile-modified')) {
-                    // Восстанавливаем оригинальную структуру
                     const $originalText = $slideContent.find('.slide-text').first();
                     $originalText.removeClass('mobile-modified');
-                    $originalText.find('p').remove(); // Удаляем если остался
+                    $originalText.find('p').remove();
 
-                    // Возвращаем h1 если его нет
                     if (!$originalText.find('h1').length) {
                         const h1Text = $slideContent.find('.slide-text').last().find('h1').text();
                         $originalText.prepend(`<h1>${h1Text}</h1>`);
                     }
 
-                    // Возвращаем p если его нет
                     if (!$originalText.find('p').length) {
                         const pText = $slideContent.find('.slide-text').last().find('p').text();
                         $originalText.append(`<p>${pText}</p>`);
                     }
 
-                    // Удаляем лишние элементы
                     $slideContent.find('.slide-text').not(':first').remove();
                     $slideContent.prepend($slideImage);
                     $slideContent.append($originalText);
@@ -67,19 +58,26 @@ $(document).ready(function() {
         speed: 500,
         cssEase: 'cubic-bezier(0.45, 0.05, 0.55, 0.95)',
         infinite: true,
-        prevArrow: '<button type="button" class="slick-prev">❮</button>',
-        nextArrow: '<button type="button" class="slick-next">❯</button>',
+        prevArrow: '<button type="button" class="slick-prev" aria-label="Previous">❮</button>',
+        nextArrow: '<button type="button" class="slick-next" aria-label="Next">❯</button>',
     }).on('init', function() {
         $(this).removeClass('loading');
-        updateSliderLayout(); // Первоначальное обновление layout
+        updateSliderLayout();
+    });
+
+    // Обработчик для снятия фокуса с кнопок
+    $(document).on('touchstart click', '.slick-prev, .slick-next', function(e) {
+        e.preventDefault();
+        $(this).blur();
+        // Небольшая задержка для гарантированного срабатывания на мобильных
+        setTimeout(() => $(this).blur(), 200);
     });
 
     // Обновляем layout при изменении размера окна
     $(window).on('resize', function() {
         updateSliderLayout();
-        $slider.slick('refresh'); // Обновляем слайдер после изменения DOM
+        $slider.slick('refresh');
     });
 
-    // Вызываем сразу на случай, если страница загрузилась сразу в мобильном виде
     updateSliderLayout();
 });
