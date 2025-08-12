@@ -1,0 +1,251 @@
+@use '../helpers' as *;
+
+.park {
+  .gradient {
+    background: var(--color-accent-text);
+    -webkit-background-clip: text; // Для Safari/Chrome
+    background-clip: text;
+    color: transparent; // чтобы был виден градиент
+    display: inline; // Важно для корректного отображения
+  }
+
+  .h1 {
+    margin: rem(15) 0;
+    padding: 0;
+
+    @include laptop {
+      font-size: rem(45);
+    }
+
+    @include mobile {
+      font-size: rem(25);
+      margin-top: rem(-50);
+    }
+  }
+
+  p {
+    margin-bottom: rem(30);
+    font-family: var(--font-family-info);
+    font-size: rem(28);
+
+  }
+
+  .primary_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: rem(50);
+
+  }
+
+  .attractions {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+    width: 80%;
+    max-width: rem(1900);
+    margin: 0 auto;
+    padding: rem(30) 0;
+
+    .attraction {
+      display: flex;
+      border: rem(3) solid #8C5DF1;
+      border-radius: rem(90);
+      overflow: hidden;
+      box-shadow: 0 rem(6) rem(25) rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: rem(400);
+      background: none;
+
+      &:hover {
+        transform: translateY(rem(-7));
+        box-shadow: 0 rem(12) rem(30) rgba(0, 0, 0, 0.2);
+        background: #151A32;
+      }
+
+      .image {
+        flex: 0 0 50%;
+        padding: rem(30);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(var(--color-accent-rgb), 0.03);
+        position: relative;
+        aspect-ratio: 1/1;
+
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          border-radius: rem(50);
+          box-shadow: 0 rem(4) rem(15) rgba(0, 0, 0, 0.1);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      @include mobile {
+        .image {
+          padding-bottom: 100%;
+          height: 0;
+
+          img {
+            width: 80%;
+            height: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .description {
+        flex: 0 0 50%;
+        padding: rem(40);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: rem(25);
+          font-size: rem(32);
+          color: var(--color-accent);
+          line-height: 1.3;
+        }
+
+        p {
+          margin: 0;
+          font-size: rem(28);
+          line-height: 1.6;
+          color: var(--color-text);
+        }
+      }
+
+      @include laptop {
+        width: 100%;
+        min-height: rem(380);
+
+        .description {
+          padding: rem(30);
+
+          h2 {
+            font-size: rem(32);
+          }
+
+          p {
+            font-size: rem(22);
+          }
+        }
+      }
+
+      @include tablet {
+        width: 90%;
+        min-height: rem(350);
+
+        .image, .description {
+          padding: rem(25);
+        }
+
+        .description h2 {
+          font-size: rem(24);
+        }
+      }
+
+      @include mobile {
+        width: 95%;
+        flex-direction: column;
+        min-height: auto;
+
+        .image {
+          flex: 0 0 auto;
+          padding-bottom: 100%; // Создаем квадрат через padding
+          height: 0;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .description {
+          flex: 1 1 auto;
+          padding: rem(25);
+
+          h2 {
+            font-size: rem(22);
+            margin-bottom: rem(15);
+          }
+
+          p {
+            font-size: rem(16);
+          }
+        }
+      }
+    }
+  }
+  .performance-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+    /* Общая высота = ширина левой колонки (т.к. фото квадратные) */
+    height: min(60vw, 600px); // Адаптивно, но не больше 600px
+
+    .left-column {
+      flex: 2; // 2/3 ширины
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1/1; // Квадрат
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+    .right-column {
+      flex: 1; // 1/3 ширины
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1/1; // Квадрат
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+  .performance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+    max-width: rem(1300);
+    margin: rem(50) auto; // Увеличил отступ сверху/снизу
+
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: rem(30);
+      transition: transform 0.3s;
+      min-height: rem(350); // Минимальный размер фото
+
+      &:hover {
+        transform: scale(1.05); // Усилил эффект ховера
+        box-shadow: 0 rem(8) rem(16) rgba(0,0,0,0.15); // Более заметная тень
+      }
+    }
+  }
+}
