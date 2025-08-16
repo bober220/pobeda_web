@@ -36,9 +36,9 @@
                    aria-label="Home"
                    title="Home">
                     <img
-                        class="logo__image"
-                        src="images/main_logo.svg"
-                        alt=""
+                            class="logo__image"
+                            src="images/main_logo.svg"
+                            alt=""
                     />
                 </a>
                 <div class="header__overlay" data-js-header-overlay>
@@ -77,9 +77,9 @@
                             </li>
                         </ul>
                     </nav>
-                    <a class="header__contact-us-link button button-accent" href="#">
+                    <button class="header__contact-us-link button button-accent" href="#">
                         Связаться с нами
-                    </a>
+                    </button>
                 </div>
 
                 <button class="header__burger-button burger-button visible-mobile"
@@ -87,9 +87,9 @@
                         aria-label="Open menu"
                         title="Open menu"
                         data-js-header-button>
-                            <span class="burger-button__line"></span>
-                            <span class="burger-button__line"></span>
-                            <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
                 </button>
             </div>
         </div>
@@ -247,10 +247,31 @@
             })
         </script>
         <!-- Platform24 widget -->
-
+        <div class="modal-overlay" id="applicationModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 class="modal-title">Отрпавка заявки</h3>
+                <form id="applicationForm" class="modal-form">
+                    <div class="form-group">
+                        <label for="userName" class="form-label">Ваше имя:</label>
+                        <input type="text" id="userName" name="userName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone" class="form-label">Номер телефона:</label>
+                        <input type="tel" id="userPhone" name="userPhone" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userQuestion" class="form-label">Ваше сообщение:</label>
+                        <textarea id="userQuestion" name="userQuestion" rows="3" class="form-textarea"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <script src="scripts/slider_posters.js"></script>
+        <script src="scripts/application-modal.js" defer></script>
     </footer>
 
-    <script src="scripts/slider_posters.js"></script>
 
 </body>
 </html>

@@ -10,6 +10,7 @@
   white-space: nowrap;
   border:  var(--border);
   border-radius: rem(12);
+  background: none;
 
   @include laptop{
     padding: rem(4) rem(13);
