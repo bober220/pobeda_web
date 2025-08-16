@@ -101,4 +101,44 @@
       align-self: center;
     }
   }
+
+  /* Стили для выпадающего меню */
+  .header__menu-item.dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1e2542;
+    border-radius: rem(10);
+    min-width: rem(200);
+    box-shadow: 0 rem(2) rem(5) rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: rem(10) 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .dropdown-menu li {
+    padding: rem(10) rem(15);
+  }
+
+  .dropdown-menu a {
+    display: block;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .dropdown-menu a:hover {
+    color: var(--color-purple);
+  }
+
+  /* Показываем меню при наведении */
+  .header__menu-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }

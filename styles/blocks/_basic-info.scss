@@ -1,0 +1,108 @@
+@use '../helpers' as *;
+
+.basic {
+  .gradient {
+    background: var(--color-accent-text);
+    -webkit-background-clip: text; // Для Safari/Chrome
+    background-clip: text;
+    color: transparent; // чтобы был виден градиент
+    display: inline; // Важно для корректного отображения
+  }
+
+  .h1 {
+    margin: rem(15) 0;
+    padding: 0;
+
+    @include laptop {
+      font-size: rem(45);
+    }
+
+    @include mobile {
+      font-size: rem(25);
+      margin-top: rem(-50);
+    }
+  }
+
+  p {
+    margin-bottom: rem(30);
+    font-family: var(--font-family-info);
+    font-size: rem(28);
+
+  }
+
+  .primary_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: rem(50);
+
+  }
+  .schedule-block {
+    border: rem(5) solid var(--color-purple);
+    border-radius: rem(70);
+    background: var(--color-element);
+    padding: rem(20);
+    margin: rem(30) auto;
+    max-width: rem(1200);
+    width: 90%;
+
+    .schedule-content {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+    }
+
+    .schedule-text {
+      flex: 1;
+
+      h2 {
+        margin-bottom: rem(10);
+        font-size: rem(42);
+        color: var(--color-accent-text);
+      }
+
+      p {
+        margin-bottom: rem(10);
+        font-size: rem(34);
+        line-height: 1.4;
+
+        a{
+          text-decoration: none;
+          color: var(--color-contact-button);
+        }
+
+        a:hover{
+          color: var(--color-purple);
+        }
+      }
+    }
+
+    .schedule-emoji {
+      font-size: rem(170);
+      margin-right: rem(20);
+    }
+
+    @include mobile {
+      .schedule-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .schedule-emoji {
+        margin: 0 0 rem(20) 0;
+      }
+    }
+  }
+
+  .plan{
+    border-radius: rem(40);
+  }
+
+  .img{
+    margin-right: rem(20);
+    width: rem(270);
+    height: rem(200);
+  }
+
+}

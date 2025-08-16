@@ -496,6 +496,8 @@ a[aria-label]::before, button[aria-label]::before {
   animation-fill-mode: both;
   animation-timeline: scroll();
   animation-range: 6.25rem 12.5rem;
+  /* Стили для выпадающего меню */
+  /* Показываем меню при наведении */
 }
 @keyframes scrolling-header {
   to {
@@ -577,6 +579,38 @@ a[aria-label]::before, button[aria-label]::before {
     max-width: 18.75rem;
     align-self: center;
   }
+}
+.header .header__menu-item.dropdown {
+  position: relative;
+}
+.header .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1e2542;
+  border-radius: 0.625rem;
+  min-width: 12.5rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0.625rem 0;
+  margin: 0;
+  list-style: none;
+}
+.header .dropdown-menu li {
+  padding: 0.625rem 0.9375rem;
+}
+.header .dropdown-menu a {
+  display: block;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header .dropdown-menu a:hover {
+  color: var(--color-purple);
+}
+.header .header__menu-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .footer {
@@ -2116,6 +2150,96 @@ body.accessibility-mode img {
 .park .performance-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.basic .gradient {
+  background: var(--color-accent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+.basic .h1 {
+  margin: 0.9375rem 0;
+  padding: 0;
+}
+@media (width <= 96.875rem) {
+  .basic .h1 {
+    font-size: 2.8125rem;
+  }
+}
+@media (width <= 47.9375rem) {
+  .basic .h1 {
+    font-size: 1.5625rem;
+    margin-top: -3.125rem;
+  }
+}
+.basic p {
+  margin-bottom: 1.875rem;
+  font-family: var(--font-family-info);
+  font-size: 1.75rem;
+}
+.basic .primary_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3.125rem;
+}
+.basic .schedule-block {
+  border: 0.3125rem solid var(--color-purple);
+  border-radius: 4.375rem;
+  background: var(--color-element);
+  padding: 1.25rem;
+  margin: 1.875rem auto;
+  max-width: 75rem;
+  width: 90%;
+}
+.basic .schedule-block .schedule-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.basic .schedule-block .schedule-text {
+  flex: 1;
+}
+.basic .schedule-block .schedule-text h2 {
+  margin-bottom: 0.625rem;
+  font-size: 2.625rem;
+  color: var(--color-accent-text);
+}
+.basic .schedule-block .schedule-text p {
+  margin-bottom: 0.625rem;
+  font-size: 2.125rem;
+  line-height: 1.4;
+}
+.basic .schedule-block .schedule-text p a {
+  text-decoration: none;
+  color: var(--color-contact-button);
+}
+.basic .schedule-block .schedule-text p a:hover {
+  color: var(--color-purple);
+}
+.basic .schedule-block .schedule-emoji {
+  font-size: 10.625rem;
+  margin-right: 1.25rem;
+}
+@media (width <= 47.9375rem) {
+  .basic .schedule-block .schedule-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .basic .schedule-block .schedule-emoji {
+    margin: 0 0 1.25rem 0;
+  }
+}
+.basic .plan {
+  border-radius: 2.5rem;
+}
+.basic .img {
+  margin-right: 1.25rem;
+  width: 16.875rem;
+  height: 12.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
