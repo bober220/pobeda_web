@@ -6,7 +6,7 @@ class ApplicationModal {
         this.openBtns = document.querySelectorAll('.header__contact-us-link, .application'); // Добавляем оба селектора
 
         // URL API (для разработки)
-        this.API_URL = 'http://192.168.1.103:5000/api/send-to-telegram';
+        this.API_URL = 'http://localhost:5000/api/send-to-telegram';
 
         // Состояние отправки
         this.isSending = false;
