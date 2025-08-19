@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import fetch from "node-fetch"; // если Node <18
+import fetch from "node-fetch";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// --- эндпоинт для слайдера ---
+// --- Эндпоинт: список картинок ---
 app.get("/api/images", async (req, res) => {
     try {
         const token = process.env.YANDEX_DISK_TOKEN;
@@ -30,19 +30,56 @@ app.get("/api/images", async (req, res) => {
         }
 
         const data = await response.json();
-        res.json(data);
+
+        // фильтруем только картинки
+        const imageFiles = (data._embedded?.items || []).filter(
+            (item) => item.type === "file" && item.mime_type.startsWith("image/")
+        );
+
+        // вместо прямой ссылки -> отдаём свои прокси-ссылки
+        const images = imageFiles.map((item) => ({
+            name: item.name,
+            url: `/api/image?path=${encodeURIComponent(item.path)}`,
+        }));
+
+        res.json(images);
     } catch (err) {
         console.error("Ошибка /api/images:", err);
         res.status(500).json({ error: "Ошибка сервера" });
     }
 });
 
-app.get("/api/map-key", (req, res) => {
-    const key = process.env.YANDEX_MAPS_KEY;
-    if (!key) {
-        return res.status(500).json({ error: "YANDEX_MAPS_KEY не найден в .env" });
+// --- Эндпоинт: отдаёт одну картинку ---
+app.get("/api/image", async (req, res) => {
+    try {
+        const token = process.env.YANDEX_DISK_TOKEN;
+        const filePath = req.query.path;
+        if (!filePath) {
+            return res.status(400).json({ error: "Не указан путь файла" });
+        }
+
+        const response = await fetch(
+            `https://cloud-api.yandex.net/v1/disk/resources/download?path=${encodeURIComponent(filePath)}`,
+            { headers: { Authorization: `OAuth ${token}` } }
+        );
+
+        const data = await response.json();
+        if (!data.href) {
+            return res.status(500).json({ error: "Не удалось получить ссылку на файл" });
+        }
+
+        // получаем сам файл
+        const fileResp = await fetch(data.href);
+        if (!fileResp.ok) {
+            return res.status(500).json({ error: "Ошибка загрузки файла" });
+        }
+
+        res.setHeader("Content-Type", fileResp.headers.get("content-type"));
+        fileResp.body.pipe(res);
+    } catch (err) {
+        console.error("Ошибка /api/image:", err);
+        res.status(500).json({ error: "Ошибка сервера при отдаче файла" });
     }
-    res.json({ key });
 });
 
 app.listen(PORT, () => {
