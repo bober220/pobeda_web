@@ -1,43 +1,99 @@
-@use '../helpers' as *;
+/* Панель версии для слабовидящих */
+.accessibility-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px;
+}
 
-/* Стиль кнопки */
-.accessibility-btn {
-  position: fixed;
-  bottom: rem(20);
-  right: rem(20);
-  z-index: 9999;
-  padding: rem(10) rem(15);
-  background: #0056b3;
-  color: white;
+.vision-panel {
+  background: #f5f5f5;
+  border-top: 2px solid #ccc;
+  padding: 15px;
+
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.vision-settings {
+  h3{
+    color: black;
+  }
+
+  .setting-group {
+    margin: 10px 0;
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    margin: 2px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #fff;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+}
+
+/* 🎨 Темы */
+body[data-theme="black-white"] {
+  background: #ffffff;
+  color: #000000;
+}
+body[data-theme="white-black"] {
+  background: #000000;
+  color: #ffffff;
+}
+body[data-theme="blue-light"] {
+  background: #add8e6;
+  color: #001f4d;
+}
+body[data-theme="brown-beige"] {
+  background: #f5f5dc;
+  color: #5b3a29;
+}
+body[data-theme="green-dark"] {
+  background: #3b2f2f;
+  color: #228b22;
+}
+
+/* 🖼 Ч/б изображения */
+img.grayscale {
+  filter: grayscale(100%);
+}
+
+.accessibility-icon {
+  background: none;
   border: none;
-  border-radius: rem(15);
   cursor: pointer;
-  font-size: rem(16);
-  transition: all 0.3s;
+  margin-left: 15px;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    color: #007acc; /* синий по умолчанию */
+    transition: transform 0.2s;
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
 }
 
-.accessibility-btn:hover {
-  background: #003d7a;
-}
+/* Меню для слабовидящих — текст всегда чёрный */
+.vision-panel {
+  color: #000;
 
-/* Стили для режима доступности */
-body.accessibility-mode {
-  font-size: rem(20) !important;
-  line-height: 1.8 !important;
-  color: #000 !important;
-  background: #fff !important;
-}
-
-body.accessibility-mode * {
-  color: inherit !important;
-  background: transparent !important;
-}
-
-body.accessibility-mode a {
-  color: #0066cc !important;
-  text-decoration: underline !important;
-}
-
-body.accessibility-mode img {
-  filter: contrast(120%) !important;
+  button {
+    color: #000;
+  }
 }

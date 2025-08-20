@@ -87,7 +87,72 @@
             </div>
         </div>
     </header>
+    <div class="accessibility-toggle">
+        <button id="toggle-vision" class="accessibility-icon" title="Версия для слабовидящих">
+            <!-- SVG иконка глаза -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.25c-2.62 0-4.75-2.13-4.75-4.75S9.38 7.25 12 7.25 16.75 9.38 16.75 12 14.62 16.75 12 16.75z"/>
+                <circle cx="12" cy="12" r="2.5"/>
+            </svg>
+        </button>
+    </div>
 
+    <!-- Панель настроек -->
+    <div id="vision-panel" class="vision-panel hidden">
+        <div class="vision-settings container">
+            <h3>Настройки отображения</h3>
+
+            <div class="setting-group">
+                <span>Размер шрифта:</span>
+                <button data-font="decrease">A−</button>
+                <button data-font="increase">A+</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Цвета сайта:</span>
+                <button data-theme="black-white">Ч/Б (чёрный по белому)</button>
+                <button data-theme="white-black">Б/Ч (белый по чёрному)</button>
+                <button data-theme="blue-light">Тёмно-синий по голубому</button>
+                <button data-theme="brown-beige">Коричневый по бежевому</button>
+                <button data-theme="green-dark">Зелёный по тёмно-коричневому</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Изображения:</span>
+                <button data-images="on">Показать</button>
+                <button data-images="off">Скрыть</button>
+                <button data-images="grayscale">Чёрно-белые</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Межстрочный интервал:</span>
+                <button data-line="normal">Стандартный</button>
+                <button data-line="medium">Средний</button>
+                <button data-line="large">Большой</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Межбуквенный интервал:</span>
+                <button data-letter="normal">Стандартный</button>
+                <button data-letter="wide">Широкий</button>
+                <button data-letter="extra">Очень широкий</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Шрифт:</span>
+                <button data-fonttype="sans">Без засечек</button>
+                <button data-fonttype="serif">С засечками</button>
+            </div>
+
+            <div class="setting-group">
+                <span>Синтез речи:</span>
+                <button id="speak-btn">Озвучить текст</button>
+                <button id="stop-speak">Остановить</button>
+            </div>
+
+            <button id="reset-vision" class="button">Сбросить</button>
+        </div>
+    </div>
     <main class="container">
         <div class="events">
             <div class="info-block">

@@ -1,44 +1,96 @@
 @charset "UTF-8";
-/* Стиль кнопки */
-.accessibility-btn {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  z-index: 9999;
-  padding: 0.625rem 0.9375rem;
-  background: #0056b3;
-  color: white;
-  border: none;
-  border-radius: 0.9375rem;
+/* Панель версии для слабовидящих */
+.accessibility-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px;
+}
+
+.vision-panel {
+  background: #f5f5f5;
+  border-top: 2px solid #ccc;
+  padding: 15px;
+}
+.vision-panel.hidden {
+  display: none;
+}
+
+.vision-settings h3 {
+  color: black;
+}
+.vision-settings .setting-group {
+  margin: 10px 0;
+}
+.vision-settings .setting-group span {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.vision-settings button {
+  margin: 2px;
+  padding: 6px 10px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: #fff;
+}
+.vision-settings button:hover {
+  background: #ddd;
 }
 
-.accessibility-btn:hover {
-  background: #003d7a;
+/* 🎨 Темы */
+body[data-theme=black-white] {
+  background: #ffffff;
+  color: #000000;
 }
 
-/* Стили для режима доступности */
-body.accessibility-mode {
-  font-size: 1.25rem !important;
-  line-height: 1.8 !important;
-  color: #000 !important;
-  background: #fff !important;
+body[data-theme=white-black] {
+  background: #000000;
+  color: #ffffff;
 }
 
-body.accessibility-mode * {
-  color: inherit !important;
-  background: transparent !important;
+body[data-theme=blue-light] {
+  background: #add8e6;
+  color: #001f4d;
 }
 
-body.accessibility-mode a {
-  color: #0066cc !important;
-  text-decoration: underline !important;
+body[data-theme=brown-beige] {
+  background: #f5f5dc;
+  color: #5b3a29;
 }
 
-body.accessibility-mode img {
-  filter: contrast(120%) !important;
+body[data-theme=green-dark] {
+  background: #3b2f2f;
+  color: #228b22;
+}
+
+/* 🖼 Ч/б изображения */
+img.grayscale {
+  filter: grayscale(100%);
+}
+
+.accessibility-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.accessibility-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #007acc; /* синий по умолчанию */
+  transition: transform 0.2s;
+}
+.accessibility-icon:hover svg {
+  transform: scale(1.1);
+}
+
+/* Меню для слабовидящих — текст всегда чёрный */
+.vision-panel {
+  color: #000;
+}
+.vision-panel button {
+  color: #000;
 }
 
 /*# sourceMappingURL=eye.css.map */

@@ -1,15 +1,19 @@
 {
-  "name": "backend",
+  "name": "pobeda-backend",
   "version": "1.0.0",
-  "main": "api.js",
   "type": "module",
+  "main": "api.js",
   "scripts": {
     "start": "node api.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
